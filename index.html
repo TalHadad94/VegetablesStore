@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דף HTML פשוט</title>
+    <title>חנות ירקות ופירות</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,19 +13,20 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">דף הבית</a></li>
-                <li><a href="#">אודות</a></li>
-                <li><a href="#">יצירת קשר</a></li>
+                <li><a href="#home">דף הבית</a></li>
+                <li><a href="#about">אודות</a></li>
+                <li><a href="#contact">יצירת קשר</a></li>
             </ul>
         </nav>
-        <h1>ברוכים הבאים לדף HTML פשוט</h1>
+        <h1>ברוכים הבאים לחנות הירקות והפירות</h1>
     </header>
     <main>
-        <p>זהו דוגמה בסיסית לקובץ HTML.</p>
-        <p>ניתן להוסיף כאן תוכן נוסף לפי הצורך.</p>
+        <section id="home" class="active">ברוכים הבאים לדף הבית של החנות</section>
+        <section id="about" style="display: none;">מידע אודות החנות והמוצרים שלנו</section>
+        <section id="contact" style="display: none;">צור קשר עמנו לבירורים ומידע נוסף</section>
     </main>
     <footer>
-        <p>&copy; 2025 טל חדד</p>
+        <p>© 2025 טל חדד</p>
     </footer>
     <script src="script.js"></script>
 </body>
