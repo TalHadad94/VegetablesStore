@@ -20,14 +20,38 @@
                 <li><a href="#basket">הסל שלי</a></li>
             </ul>
         </nav>
-        <h1>ברוכים הבאים לחנות הירקות והפירות הגל הירוק</h1>
     </header>
     <main>
-        <section id="about" class="active">מידע אודות החנות והמוצרים שלנו</section>
-        <section id="vegetables" style="display: none;">ירקות</section>
+        <section id="about" class="active">
+            <h2>ברוכים הבאים לחנות הגל הירוק</h2>
+            <h2>ירקות ופירות היישר מהחקלאי לצרכן</h2>
+        </section>
+
+        <section id="vegetables" style="display: none;">
+            <h2>ירקות</h2>
+            <div class="vegetable-menu">
+                <div class="vegetable-item" data-name="עגבנייה">
+                    <img src="tomato.png" alt="Tomato" style="width: 100px;">
+                    <button class="add-to-basket">הוסף לסל</button>
+                </div>
+                <div class="vegetable-item" data-name="מלפפון">
+                    <img src="cucumber.png" alt="Cucumber" style="width: 100px;">
+                    <button class="add-to-basket">הוסף לסל</button>
+                </div>
+                <!-- Add more vegetables as needed -->
+            </div>
+        </section>
+
         <section id="fruits" style="display: none;">פירות</section>
+
         <section id="specials" style="display: none;">מבצעים</section>
-        <section id="basket" style="display: none;">הסל שלי</section>
+
+        <section id="basket" style="display: none;">
+            <h2>הסל שלי</h2>
+            <ul id="basket-list">
+                <!-- Basket items will appear here -->
+            </ul>
+        </section>
     </main>
     <footer>
         <p>© 2025 טל חדד</p>

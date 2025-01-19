@@ -1,3 +1,4 @@
+/* General sets */
 body {
     background-color: white;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     text-align: right;
 }
 
+/* nav behavier */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -30,8 +32,9 @@ nav ul li a:hover {
     color: black; /* Text color on hover */
 }
 
+/* Visabilitis for main section */
 main section {
-    transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out; /* Maybe not working! Smoothly animates changes to the opacity property over 0.3 seconds, creating a fade-in/out effect.*/
 }
 
 main section.active {
@@ -42,4 +45,40 @@ main section.active {
 main section:not(.active) {
     opacity: 0;
     display: none;
+}
+
+/* Items & Basket */
+.vegetable-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.vegetable-item {
+    text-align: center;
+}
+
+.vegetable-item img {
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.vegetable-item img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.add-to-basket {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.add-to-basket:hover {
+    background-color: #3e8e41;
 }
