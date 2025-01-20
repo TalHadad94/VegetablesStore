@@ -6,8 +6,18 @@ body {
     direction: rtl;
     text-align: right;
 }
+/* Header */
+header {
+    background-image: url('Images/Header\ background.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 
 /* nav behavier */
+nav {
+    margin: auto;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
