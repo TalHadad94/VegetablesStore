@@ -1,3 +1,6 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 /* General sets */
 body {
     background-color: white;
@@ -14,7 +17,6 @@ header {
 }
 
 /* nav behavier */
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -29,6 +31,8 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: 'Pacifico', cursive;
+    font-size: 17px;
     display: block;
     padding: 10px 20px;
     text-decoration: none;
