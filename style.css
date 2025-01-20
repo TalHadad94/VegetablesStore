@@ -24,6 +24,7 @@ nav ul {
     margin: 0;
     display: flex;
     background-color: #a8e08a; /* Light swamp green */
+    border-radius: 20px; /* Rounds the edges */
 }
 
 nav ul li {
