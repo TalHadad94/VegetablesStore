@@ -46,3 +46,27 @@ document.querySelectorAll('.add-to-basket').forEach(button => {
         basketList.appendChild(listItem);
     });
 });
+/* Maybe not deeded --> If you remove the JavaScript code that dynamically applies the .active class, the navigation bar won't automatically update the visual indication of the "active" link as the user scrolls through the page. This means: Manual Updates Only. No Scroll Detection. Functionality Limited to Clicks.
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const sections = document.querySelectorAll('section'); // Assume each section has an ID corresponding to nav links.
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 50) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+});
+*/

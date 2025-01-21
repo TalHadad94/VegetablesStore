@@ -1,5 +1,8 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap'); /*"Heebo"*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap'); /*"Rubik Doodle Shadow"*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap'); /*"Rubik Dirt"*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap'); /*"Rubik Gemstones"*/
 
 /* General sets */
 body {
@@ -22,8 +25,9 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    background-color: #a8e08a; /* Light swamp green */
+    background-color: #a8e08a;
     border-radius: 20px; /* Rounds the edges */
+    opacity: 92%;
 }
 
 nav ul li {
@@ -31,21 +35,45 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'Pacifico', cursive;
-    font-size: 17px;
+    position: relative; /* For pseudo-element positioning */
     display: block;
     padding: 10px 20px;
+    font-family: "Heebo", serif;
     text-decoration: none;
     color: white;
+    overflow: hidden; /* To contain the animation */
+    z-index: 0; /* Ensure pseudo-element layers are below text */
 }
 
-nav ul li a:hover {
-    background-color: #4CAF50; /* Green */
-    color: black; /* Text color on hover */
+nav ul li a:hover,
+nav ul li a.active {
+    color: black; /* Change text color when active or hovered */
+}
+
+/* Adds a circle element that animates from the center */
+nav ul li a::before {
+    content: ''; /* This makes the circle exist */
+    position: absolute; /* Allows us to position the circle */
+    top: 50%; /* Start in the middle vertically */
+    left: 50%; /* Start in the middle horizontally */
+    width: 0; /* Start with no size (invisible) */
+    height: 0; /* Start with no size (invisible) */
+    background-color: #219831; /* Color the circle */
+    border-radius: 50%; /* Makes it a circle */
+    transform: translate(-50%, -50%); /* Center it exactly */
+    z-index: -1; /* Ensures the circle is below the text */
+    transition: width 0.6s ease, height 0.6s ease;  /* Controls the expansion of the circle smoothly */
+}
+
+nav ul li a:hover::before,
+nav ul li a.active::before {
+    width: 80%; /* X size */
+    height: 60%; /* Y size */
 }
 
 /* Visabilitis for main section */
 main section {
+    font-family: "Heebo", serif;
     transition: opacity 0.3s ease-out; /* Maybe not working! Smoothly animates changes to the opacity property over 0.3 seconds, creating a fade-in/out effect.*/
 }
 
@@ -93,4 +121,11 @@ main section:not(.active) {
 
 .add-to-basket:hover {
     background-color: #3e8e41;
+}
+
+/* About section */
+#about {
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
 }
