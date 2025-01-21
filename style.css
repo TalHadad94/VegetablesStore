@@ -37,8 +37,9 @@ nav ul li {
 nav ul li a {
     position: relative; /* For pseudo-element positioning */
     display: block;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-family: "Heebo", serif;
+    font-size: 18px;
     text-decoration: none;
     color: white;
     overflow: hidden; /* To contain the animation */
@@ -87,6 +88,13 @@ main section:not(.active) {
     display: none;
 }
 
+/* About section */
+#about {
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 /* Items & Basket */
 .vegetable-menu {
     display: flex;
@@ -123,9 +131,7 @@ main section:not(.active) {
     background-color: #3e8e41;
 }
 
-/* About section */
-#about {
+footer {
     text-align: center;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-top: 500px; /*Temperory for visaulitions*/
 }
