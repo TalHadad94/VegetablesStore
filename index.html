@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="ברוכים הבאים לחנות הגל הירוק! ירקות ופירות טריים ואיכותיים ישירות מהחקלאי לצרכן.">
     <title>הגל הירוק</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo" style="text-align: center;">
-            <img src="Images/logo.png" alt="Logo" style="width: 200px; height: auto;">
+        <div class="logo">
+            <img src="Images/logo.png" alt="Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#about">עלינו</a></li>
-                <li><a href="#vegetables">ירקות</a></li>
-                <li><a href="#fruits">פירות</a></li>
-                <li><a href="#basket">הסל שלי</a></li>
+                <li><a href="#about" aria-label="אודות - עלינו">עלינו</a></li>
+                <li><a href="#vegetables" aria-label="ירקות">ירקות</a></li>
+                <li><a href="#fruits" aria-label="פירות">פירות</a></li>
+                <li><a href="#basket" aria-label="הסל שלי">הסל שלי</a></li>
             </ul>
         </nav>
     </header>
@@ -26,8 +27,8 @@
             <h2>ברוכים הבאים לחנות הגל הירוק<br>ירקות ופירות היישר מהחקלאי לצרכן</h2>
             <p>
                 מבטיחים להגיע אליכם הביתה עם המשלוח המושלם,
-                 כזה שאתם מקבלים במהירות האפשרית ומרגישים כאילו קטפתם את התוצרת בעצמכם,
-                 ועל ירקות ופירות טריים ויפייפים שמגיעים ישירות אליכם מהשדות והמטעים הנפלאים של ארצנו.
+                כזה שאתם מקבלים במהירות האפשרית ומרגישים כאילו קטפתם את התוצרת בעצמכם,
+                ועל ירקות ופירות טריים ויפייפים שמגיעים ישירות אליכם מהשדות והמטעים הנפלאים של ארצנו.
             </p>
             <br>
             <h3>פעילות ומיקום</h3>
@@ -43,11 +44,11 @@
             <h2>ירקות</h2>
             <div class="vegetable-menu">
                 <div class="vegetable-item" data-name="עגבנייה">
-                    <img src="Images/Tomatos.jpg" alt="Tomato" style="width: 100px;">
+                    <img src="Images/Tomatos.jpg" alt="עגבנייה" class="product-img">
                     <button class="add-to-basket">הוסף לסל</button>
                 </div>
                 <div class="vegetable-item" data-name="מלפפון">
-                    <img src="Images/Cucumbers.jpg" alt="Cucumber" style="width: 100px;">
+                    <img src="Images/Cucumbers.jpg" alt="מלפפון" class="product-img">
                     <button class="add-to-basket">הוסף לסל</button>
                 </div>
                 <!-- Add more vegetables as needed -->
@@ -58,11 +59,11 @@
             <h2>פירות</h2>
             <div class="fruit-menu">
                 <div class="fruit-item" data-name="קיווי">
-                    <img src="Images/Kiwi.jpg" alt="Kiwi" style="width: 100px;">
+                    <img src="Images/Kiwi.jpg" alt="קיווי" class="product-img">
                     <button class="add-to-basket">הוסף לסל</button>
                 </div>
                 <div class="fruit-item" data-name="ענבים">
-                    <img src="Images/Grape.jpg" alt="Grape" style="width: 100px;">
+                    <img src="Images/Grape.jpg" alt="ענבים" class="product-img">
                     <button class="add-to-basket">הוסף לסל</button>
                 </div>
                 <!-- Add more fruits as needed -->

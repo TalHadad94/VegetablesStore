@@ -19,6 +19,15 @@ header {
     background-size: 100% 100%;
 }
 
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
 /* nav behavier */
 nav ul {
     list-style-type: none;
@@ -38,7 +47,7 @@ nav ul li a {
     position: relative; /* For pseudo-element positioning */
     display: block;
     padding: 5px 20px;
-    font-family: "Heebo", serif;
+    font-family: "Heebo", Arial, serif;
     font-size: 18px;
     text-decoration: none;
     color: white;
@@ -74,7 +83,7 @@ nav ul li a.active::before {
 
 /* Visabilitis for main section */
 main section {
-    font-family: "Heebo", serif;
+    font-family: "Heebo", Arial, serif;
     transition: opacity 0.3s ease-out; /* Maybe not working! Smoothly animates changes to the opacity property over 0.3 seconds, creating a fade-in/out effect.*/
 }
 
@@ -96,6 +105,10 @@ main section:not(.active) {
 }
 
 /* Items & Basket */
+.product-img {
+    width: 100px;
+}
+
 .vegetable-menu {
     display: flex;
     flex-wrap: wrap;
