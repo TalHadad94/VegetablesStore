@@ -130,23 +130,23 @@ main section:not(.active) {
     width: 100px;
 }
 
-.vegetable-menu {
+.menu {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.vegetable-item {
+.product-item {
     text-align: center;
 }
 
-.vegetable-item img {
+.product-item img {
     border: 2px solid #4CAF50;
     border-radius: 8px;
     transition: transform 0.2s;
 }
 
-.vegetable-item img:hover {
+.product-item img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
