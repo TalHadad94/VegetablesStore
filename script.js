@@ -17,10 +17,6 @@ document.querySelectorAll('nav ul li a').forEach(link => {
         if (section) {
             section.style.display = 'block';
             section.classList.add('active');
-
-            // Accessibility: Focus the section
-            section.setAttribute('tabindex', '-1'); // Ensure focusable
-            section.focus();
         }
     });
 });
