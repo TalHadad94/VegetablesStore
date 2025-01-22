@@ -104,6 +104,27 @@ main section:not(.active) {
     padding-right: 25px;
 }
 
+/* Vegetables section */
+#vegetables h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: "Rubik Dirt", Arial, serif;
+}
+
+/* fruits section */
+#fruits h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: "Rubik Gemstones", Arial, serif;
+}
+
+/* basket section */
+#basket h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: "Rubik Doodle Shadow", Arial, serif;
+}
+
 /* Items & Basket */
 .product-img {
     width: 100px;
