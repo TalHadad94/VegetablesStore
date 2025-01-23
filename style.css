@@ -111,7 +111,7 @@ main section:not(.active) {
 }
 
 #Slogen {
-    font-family: "Amatic SC";
+    font-family: "Amatic SC", Arial, serif;
     font-size: 26px;
     font-weight: bold;
 }
