@@ -10,15 +10,15 @@
         "name": "אגס ישראלי",
         "price": 18.5,
         "units": "קג",
-        "imagePath": "Images/Vegetables/אגס ישראלי.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/אגס ישראלי.jpg",
+        "section": "fruits"
     },
     {
         "name": "אגס ספרדי",
         "price": 18.5,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/אגס ספרדי.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/אגס ספרדי.jpg",
+        "section": "fruits"
     },
     {
         "name": "סלק וואקום מוכן",
@@ -31,36 +31,36 @@
         "name": "אננס ישראלי גדול",
         "price": 50.0,
         "units": "יחידה",
-        "imagePath": "Images/Vegetables/אננס ישראלי גדול.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/אננס ישראלי גדול.jpg",
+        "section": "fruits"
     },
     {
         "name": "אננס ישראלי ענק",
         "price": 65.0,
         "units": "יחידה",
-        "imagePath": "Images/Vegetables/אננס ישראלי ענק.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/אננס ישראלי ענק.jpg",
+        "section": "fruits"
     },
     {
-        "name": "אננס יבוא גדול ״דל מונט״",
+        "name": "אננס יבוא גדול דל מונט",
         "price": 50.0,
         "units": "יחידה",
-        "imagePath": "Images/Vegetables/אננס יבוא גדול ״דל מונט״.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/אננס יבוא גדול דל מונט.jpg",
+        "section": "fruits"
     },
     {
         "name": "סברס",
         "price": 45.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/סברס.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/סברס.jpg",
+        "section": "fruits"
     },
     {
         "name": "קיוי ישראלי גדול",
         "price": 35.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/קיוי ישראלי גדול.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/קיוי ישראלי גדול.jpg",
+        "section": "fruits"
     },
     {
         "name": "תירס צהוב",
@@ -140,10 +140,10 @@
         "section": "vegetables"
     },
     {
-        "name": "קלמנטינה אור גדולה  ללא גרעינים",
+        "name": "קלמנטינה אור גדולה ללא גרעינים",
         "price": 11.8,
         "units": "ק״ג",
-        "imagePath": "Images/Fruits/קלמנטינה אור גדולה  ללא גרעינים.jpg",
+        "imagePath": "Images/Fruits/קלמנטינה אור גדולה ללא גרעינים.jpg",
         "section": "fruits"
     },
     {
@@ -171,22 +171,22 @@
         "name": "פומלית",
         "price": 12.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/פומלית.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/פומלית.jpg",
+        "section": "fruits"
     },
     {
         "name": "אשכולית אדומה",
         "price": 12.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/אשכולית אדומה.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/אשכולית אדומה.jpg",
+        "section": "fruits"
     },
     {
         "name": "לימון",
         "price": 12.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/לימון.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/לימון.jpg",
+        "section": "fruits"
     },
     {
         "name": "תפוח פינק ליידי חוץ לארץ",
@@ -206,29 +206,29 @@
         "name": "מארז פסיפלורה",
         "price": 35.0,
         "units": "",
-        "imagePath": "Images/Vegetables/מארז פסיפלורה.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/מארז פסיפלורה.jpg",
+        "section": "fruits"
     },
     {
         "name": "פטל אדום",
         "price": 35.0,
         "units": "מארז",
-        "imagePath": "Images/Vegetables/פטל אדום.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/פטל אדום.jpg",
+        "section": "fruits"
     },
     {
         "name": "אוכמניות",
         "price": 15.0,
         "units": "מארז",
-        "imagePath": "Images/Vegetables/אוכמניות.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/אוכמניות.jpg",
+        "section": "fruits"
     },
     {
         "name": "תות שדה",
         "price": 35.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/תות שדה.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/תות שדה.jpg",
+        "section": "fruits"
     },
     {
         "name": "ענבים לבן",
@@ -283,8 +283,8 @@
         "name": "אבוקדו",
         "price": 20.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/אבוקדו.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/אבוקדו.jpg",
+        "section": "fruits"
     },
     {
         "name": "ברוקולי",
@@ -381,8 +381,8 @@
         "name": "רימון",
         "price": 15.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/רימון.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/רימון.jpg",
+        "section": "fruits"
     },
     {
         "name": "קולורבי",
@@ -409,22 +409,22 @@
         "name": "מילון",
         "price": 12.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/מילון.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/מילון.jpg",
+        "section": "fruits"
     },
     {
         "name": "פומלה אדומה פרמיון",
         "price": 12.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/פומלה אדומה פרמיון.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/פומלה אדומה פרמיון.jpg",
+        "section": "fruits"
     },
     {
         "name": "פומלה לבנה פרמיון",
         "price": 12.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/פומלה לבנה פרמיון.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/פומלה לבנה פרמיון.jpg",
+        "section": "fruits"
     },
     {
         "name": "גמבה אדום/צהוב/ירוק כהה/ ירוק בהיר/כתום",
@@ -682,8 +682,8 @@
         "name": "מיץ רימונים טבעי בקבוק ליטר",
         "price": 25.0,
         "units": "",
-        "imagePath": "Images/Vegetables/מיץ רימונים טבעי בקבוק ליטר.jpg",
-        "section": "vegetables"
+        "imagePath": "Images/Fruits/מיץ רימונים טבעי בקבוק ליטר.jpg",
+        "section": "fruits"
     },
     {
         "name": "כוסברה גוש קטיף",
