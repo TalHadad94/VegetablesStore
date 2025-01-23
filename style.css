@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap'); /*"Rubik Gemstones"*/
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap'); /*"Amatic SC"*/
 
-/* General sets */
+/* General Styles */
 body {
     background-color: white;
     margin: 0;
@@ -13,16 +13,13 @@ body {
     font-family: Arial, sans-serif;
     direction: rtl;
     text-align: right;
-    background-image: url('Images/Section\ background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url('Images/Section background.png') no-repeat fixed center;
     background-size: cover;
 }
+
 /* Header */
 header {
-    background-image: url('Images/Header\ background.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background: url('Images/Header background.jpg') no-repeat center/cover;
 }
 
 .logo {
@@ -31,18 +28,17 @@ header {
 
 .logo img {
     width: 200px;
-    height: auto;
 }
 
-/* nav behavier */
+/* Navigation */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     background-color: #a8e08a;
-    border-radius: 20px; /* Rounds the edges */
-    opacity: 92%;
+    border-radius: 20px;
+    opacity: 0.92;
 }
 
 nav ul li {
@@ -50,47 +46,47 @@ nav ul li {
 }
 
 nav ul li a {
-    position: relative; /* For pseudo-element positioning */
+    position: relative;
     display: block;
     padding: 5px 20px;
     font-family: "Heebo", Arial, serif;
     font-size: 18px;
     text-decoration: none;
     color: white;
-    overflow: hidden; /* To contain the animation */
-    z-index: 0; /* Ensure pseudo-element layers are below text */
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: black; /* Change text color when active or hovered */
+    color: black;
 }
 
-/* Adds a circle element that animates from the center */
 nav ul li a::before {
-    content: ''; /* This makes the circle exist */
-    position: absolute; /* Allows us to position the circle */
-    top: 50%; /* Start in the middle vertically */
-    left: 50%; /* Start in the middle horizontally */
-    width: 0; /* Start with no size (invisible) */
-    height: 0; /* Start with no size (invisible) */
-    background-color: #219831; /* Color the circle */
-    border-radius: 50%; /* Makes it a circle */
-    transform: translate(-50%, -50%); /* Center it exactly */
-    z-index: -1; /* Ensures the circle is below the text */
-    transition: width 0.6s ease, height 0.6s ease;  /* Controls the expansion of the circle smoothly */
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #219831;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: width 0.6s ease, height 0.6s ease;
 }
 
 nav ul li a:hover::before,
 nav ul li a.active::before {
-    width: 80%; /* X size */
-    height: 60%; /* Y size */
+    width: 80%;
+    height: 60%;
 }
 
-/* Visabilitis for main section */
+/* Sections */
 main section {
     font-family: "Heebo", Arial, serif;
-    transition: opacity 0.3s ease-out; /* Maybe not working! Smoothly animates changes to the opacity property over 0.3 seconds, creating a fade-in/out effect.*/
+    transition: opacity 0.3s ease-out;
 }
 
 main section.active {
@@ -103,11 +99,10 @@ main section:not(.active) {
     display: none;
 }
 
-/* About section */
+/* About Section */
 #about {
     text-align: center;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 0 25px;
 }
 
 #Slogen {
@@ -116,30 +111,54 @@ main section:not(.active) {
     font-weight: bold;
 }
 
-/* Vegetables section */
-#vegetables h2{
+/* Section Titles */
+#vegetables h2,
+#fruits h2,
+#basket h2 {
     text-align: center;
     font-size: 40px;
+}
+
+#vegetables h2 {
     font-family: "Rubik Dirt", Arial, serif;
 }
 
-/* fruits section */
-#fruits h2{
-    text-align: center;
-    font-size: 40px;
+#fruits h2 {
     font-family: "Rubik Gemstones", Arial, serif;
 }
 
-/* basket section */
-#basket h2{
-    text-align: center;
-    font-size: 40px;
+#basket h2 {
     font-family: "Rubik Doodle Shadow", Arial, serif;
 }
 
-/* Items & Basket */
+/* Products and Basket */
+.details-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-details {
+    text-align: right;
+    max-width: 150px;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.item-price,
+.item-units {
+    font-size: 13px;
+    color: #000000;
+}
+
 .product-img {
     width: 100px;
+    border: 0.5px solid #4CAF50;
+    border-radius: 8px;
+    transition: transform 0.2s;
 }
 
 .menu {
@@ -152,18 +171,11 @@ main section:not(.active) {
     text-align: center;
 }
 
-.product-item img {
-    border: 1px solid #4CAF50;
-    border-radius: 8px;
-    transition: transform 0.2s;
-}
-
 .product-item img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    transform: scale(1.1);
 }
 
 .add-to-basket {
-    margin-top: 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -177,7 +189,8 @@ main section:not(.active) {
     background-color: #3e8e41;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding-top: 500px; /*Temperory for visaulitions*/
+    background-color: #219831;
 }

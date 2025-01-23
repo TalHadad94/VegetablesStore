@@ -36,12 +36,39 @@ function generateItems() {
                 itemDiv.classList.add("product-item"); // Generic class for styling
                 itemDiv.dataset.name = item.name; // Store the item's name as a data attribute
 
+                // Create a container for text and image
+                const detailsContainer = document.createElement("div");
+                detailsContainer.classList.add("details-container");
+
+                // Add text details to the container
+                const textDetails = document.createElement("div");
+                textDetails.classList.add("text-details");
+
+                const name = document.createElement("p");
+                name.textContent = item.name;
+                name.classList.add("item-name");
+                textDetails.appendChild(name);
+
+                const price = document.createElement("p");
+                price.textContent = `מחיר: ${item.price.toFixed(2)} ₪`;
+                price.classList.add("item-price");
+                textDetails.appendChild(price);
+
+                const units = document.createElement("p");
+                units.textContent = `כמות: ${item.units}`;
+                units.classList.add("item-units");
+                textDetails.appendChild(units);
+
+                detailsContainer.appendChild(textDetails);
+
                 // Add an image to the div
                 const img = document.createElement("img");
                 img.src = item.imagePath;
                 img.alt = item.name;
                 img.classList.add("product-img");
-                itemDiv.appendChild(img);
+                detailsContainer.appendChild(img);
+
+                itemDiv.appendChild(detailsContainer);
 
                 // Add a button to the div
                 const button = document.createElement("button");
