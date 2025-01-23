@@ -3,14 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap'); /*"Rubik Doodle Shadow"*/
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap'); /*"Rubik Dirt"*/
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap'); /*"Rubik Gemstones"*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap'); /*"Amatic SC"*/
 
 /* General sets */
 body {
     background-color: white;
     margin: 0;
+    color: #096115;
     font-family: Arial, sans-serif;
     direction: rtl;
     text-align: right;
+    background-image: url('Images/Section\ background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 /* Header */
 header {
@@ -104,6 +110,12 @@ main section:not(.active) {
     padding-right: 25px;
 }
 
+#Slogen {
+    font-family: "Amatic SC";
+    font-size: 26px;
+    font-weight: bold;
+}
+
 /* Vegetables section */
 #vegetables h2{
     text-align: center;
@@ -141,7 +153,7 @@ main section:not(.active) {
 }
 
 .product-item img {
-    border: 2px solid #4CAF50;
+    border: 1px solid #4CAF50;
     border-radius: 8px;
     transition: transform 0.2s;
 }
