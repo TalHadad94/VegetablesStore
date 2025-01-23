@@ -21,50 +21,44 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     });
 });
 
-// Item handeling
-const items = [
-    { name: "עגבנייה", image: "Images/Vegetables/Tomatos.jpg", category: "vegetables" },
-    { name: "מלפפון", image: "Images/Vegetables/Cucumbers.jpg", category: "vegetables" },
-    { name: "גמבה", image: "Images/Vegetables/Bell Pepper.jpg", category: "vegetables" },
-    { name: "קיווי", image: "Images/Fruits/Kiwi.jpg", category: "fruits" },
-    { name: "ענבים", image: "Images/Fruits/Grape.jpg", category: "fruits" },
-    { name: "תפוח", image: "Images/Fruits/Apple.jpg", category: "fruits" },
-];
-
 // dynamically generate the HTML for each item and append it to the appropriate section
 function generateItems() {
-    // Loop through all items
-    items.forEach(item => {
-        // Create a div for each item
-        const itemDiv = document.createElement("div");
-        itemDiv.classList.add("product-item"); // Generic class for styling
-        itemDiv.dataset.name = item.name; // Store the item's name as a data attribute
+    fetch('output.json') // Fetch data from the JSON file
+        .then(response => response.json())
+        .then(items => {
+            // Clear previous items in sections
+            document.querySelectorAll('.menu').forEach(menu => (menu.innerHTML = ''));
 
-        // Add an image to the div
-        const img = document.createElement("img");
-        img.src = item.image;
-        img.alt = item.name;
-        img.classList.add("product-img");
-        itemDiv.appendChild(img);
+            // Loop through all items
+            items.forEach(item => {
+                // Create a div for each item
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("product-item"); // Generic class for styling
+                itemDiv.dataset.name = item.name; // Store the item's name as a data attribute
 
-        // Add a button to the div
-        const button = document.createElement("button");
-        button.textContent = "הוסף לסל";
-        button.classList.add("add-to-basket");
-        button.addEventListener("click", () => addBasketItem(item.name)); // Add item to basket on click
-        itemDiv.appendChild(button);
+                // Add an image to the div
+                const img = document.createElement("img");
+                img.src = item.imagePath;
+                img.alt = item.name;
+                img.classList.add("product-img");
+                itemDiv.appendChild(img);
 
-        // Find the correct section to append the item
-        const section = document.querySelector(`#${item.category} .menu`);
-        if (section) {
-            section.appendChild(itemDiv);
-        }
-    });
+                // Add a button to the div
+                const button = document.createElement("button");
+                button.textContent = "הוסף לסל";
+                button.classList.add("add-to-basket");
+                button.addEventListener("click", () => addBasketItem(item.name)); // Add item to basket on click
+                itemDiv.appendChild(button);
+
+                // Find the correct section to append the item
+                const section = document.querySelector(`#${item.section} .menu`);
+                if (section) {
+                    section.appendChild(itemDiv);
+                }
+            });
+        })
+        .catch(error => console.error('Error loading JSON:', error));
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    generateItems(); // Populate the items dynamically
-});
 
 // Function to add an item to the basket
 function addBasketItem(itemName) {
@@ -109,4 +103,9 @@ document.querySelectorAll('.add-to-basket').forEach(button => {
             addBasketItem(itemName);
         }
     });
+});
+
+// Load items dynamically when the DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+    generateItems(); // Populate the items dynamically
 });

@@ -2,516 +2,722 @@
     {
         "name": "בננה",
         "price": 10.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/בננה.jpg",
+        "section": "fruits"
     },
     {
         "name": "אגס ישראלי",
         "price": 18.5,
-        "units": "קג"
+        "units": "קג",
+        "imagePath": "Images/Vegetables/אגס ישראלי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "אגס ספרדי",
         "price": 18.5,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/אגס ספרדי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "סלק וואקום מוכן",
         "price": 8.9,
-        "units": "מארז(550 גרם)"
+        "units": "מארז(550 גרם)",
+        "imagePath": "Images/Vegetables/סלק וואקום מוכן.jpg",
+        "section": "vegetables"
     },
     {
         "name": "אננס ישראלי גדול",
         "price": 50.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/אננס ישראלי גדול.jpg",
+        "section": "vegetables"
     },
     {
         "name": "אננס ישראלי ענק",
         "price": 65.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/אננס ישראלי ענק.jpg",
+        "section": "vegetables"
     },
     {
         "name": "אננס יבוא גדול ״דל מונט״",
         "price": 50.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/אננס יבוא גדול ״דל מונט״.jpg",
+        "section": "vegetables"
     },
     {
         "name": "סברס",
         "price": 45.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/סברס.jpg",
+        "section": "vegetables"
     },
     {
         "name": "קיוי ישראלי גדול",
         "price": 35.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/קיוי ישראלי גדול.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תירס צהוב",
         "price": 18.9,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/תירס צהוב.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תירס לבן מתוק",
         "price": 18.9,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/תירס לבן מתוק.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תפוח גלאהה גדול",
         "price": 14.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח גלאהה גדול.jpg",
+        "section": "fruits"
     },
     {
         "name": "תפוח זהוב גדול",
         "price": 14.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח זהוב גדול.jpg",
+        "section": "fruits"
     },
     {
         "name": "אפרסמון קרמבו",
         "price": 25.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/אפרסמון קרמבו.jpg",
+        "section": "fruits"
     },
     {
         "name": "אפרסמון",
         "price": 18.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/אפרסמון.jpg",
+        "section": "fruits"
     },
     {
         "name": "פלפלונים",
         "price": 10.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/פלפלונים.jpg",
+        "section": "vegetables"
     },
     {
         "name": "מלפפון בייבי",
         "price": 10.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/מלפפון בייבי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פלפל חריף אדום",
         "price": 24.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/פלפל חריף אדום.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פלפל חריף ירוק",
         "price": 18.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/פלפל חריף ירוק.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פלפל חריף אדום צילי",
         "price": 15.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/פלפל חריף אדום צילי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "קלמנטינה אור גדולה  ללא גרעינים",
         "price": 11.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/קלמנטינה אור גדולה  ללא גרעינים.jpg",
+        "section": "fruits"
     },
     {
         "name": "קלמנטינה אור ללא גרעינים",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/קלמנטינה אור ללא גרעינים.jpg",
+        "section": "fruits"
     },
     {
         "name": "תפוז",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוז.jpg",
+        "section": "fruits"
     },
     {
         "name": "תפוז אדום",
         "price": 12.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוז אדום.jpg",
+        "section": "fruits"
     },
     {
         "name": "פומלית",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/פומלית.jpg",
+        "section": "vegetables"
     },
     {
         "name": "אשכולית אדומה",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/אשכולית אדומה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "לימון",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/לימון.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תפוח פינק ליידי חוץ לארץ",
         "price": 19.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח פינק ליידי חוץ לארץ.jpg",
+        "section": "fruits"
     },
     {
         "name": "תפוח פינק ליידי ישראלי",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח פינק ליידי ישראלי.jpg",
+        "section": "fruits"
     },
     {
         "name": "מארז פסיפלורה",
         "price": 35.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/מארז פסיפלורה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פטל אדום",
         "price": 35.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/פטל אדום.jpg",
+        "section": "vegetables"
     },
     {
         "name": "אוכמניות",
         "price": 15.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/אוכמניות.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תות שדה",
         "price": 35.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/תות שדה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "ענבים לבן",
         "price": 48.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/ענבים לבן.jpg",
+        "section": "fruits"
     },
     {
         "name": "עגבניה אשכולות ישראלית",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/עגבניה אשכולות ישראלית.jpg",
+        "section": "vegetables"
     },
     {
         "name": "מלפפון",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/מלפפון.jpg",
+        "section": "vegetables"
     },
     {
         "name": "קישוא",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/קישוא.jpg",
+        "section": "vegetables"
     },
     {
         "name": "גזר",
         "price": 7.5,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/גזר.jpg",
+        "section": "vegetables"
     },
     {
         "name": "כרובית",
         "price": 12.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/כרובית.jpg",
+        "section": "vegetables"
     },
     {
         "name": "בצל ירוק",
         "price": 6.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/בצל ירוק.jpg",
+        "section": "vegetables"
     },
     {
         "name": "אבוקדו",
         "price": 20.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/אבוקדו.jpg",
+        "section": "vegetables"
     },
     {
         "name": "ברוקולי",
         "price": 12.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/ברוקולי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פטריות פורטבלו טריות",
         "price": 12.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/פטריות פורטבלו טריות.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פטריות שמפניון טריות",
         "price": 12.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/פטריות שמפניון טריות.jpg",
+        "section": "vegetables"
     },
     {
         "name": "שרי תמר",
         "price": 20.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/שרי תמר.jpg",
+        "section": "vegetables"
     },
     {
         "name": "שרי ליקופן(מנומר)",
         "price": 24.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/שרי ליקופן(מנומר).jpg",
+        "section": "vegetables"
     },
     {
         "name": "עגבנית מגי",
         "price": 24.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/עגבנית מגי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "עגבנית שרי צהוב",
         "price": 24.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/עגבנית שרי צהוב.jpg",
+        "section": "vegetables"
     },
     {
         "name": "שום ספרדי",
         "price": 38.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/שום ספרדי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "חבילת צנוניות טריות",
         "price": 6.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/חבילת צנוניות טריות.jpg",
+        "section": "vegetables"
     },
     {
         "name": "בטטה",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/בטטה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "כרוב לבן",
         "price": 6.5,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/כרוב לבן.jpg",
+        "section": "vegetables"
     },
     {
         "name": "סלק אדום טרי",
         "price": 8.5,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/סלק אדום טרי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "לפת",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/לפת.jpg",
+        "section": "vegetables"
     },
     {
         "name": "רימון",
         "price": 15.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/רימון.jpg",
+        "section": "vegetables"
     },
     {
         "name": "קולורבי",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/קולורבי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "שומר",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/שומר.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פלפל שושקה מתוק",
         "price": 25.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/פלפל שושקה מתוק.jpg",
+        "section": "vegetables"
     },
     {
         "name": "מילון",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/מילון.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פומלה אדומה פרמיון",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/פומלה אדומה פרמיון.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פומלה לבנה פרמיון",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/פומלה לבנה פרמיון.jpg",
+        "section": "vegetables"
     },
     {
         "name": "גמבה אדום/צהוב/ירוק כהה/ ירוק בהיר/כתום",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/גמבה אדום/צהוב/ירוק כהה/ ירוק בהיר/כתום.jpg",
+        "section": "vegetables"
     },
     {
         "name": "בצל לבן ישראלי",
         "price": 7.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/בצל לבן ישראלי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "חציל",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/חציל.jpg",
+        "section": "vegetables"
     },
     {
         "name": "צרור כוסברה",
         "price": 4.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/צרור כוסברה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "צרור פטרוזליה",
         "price": 4.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/צרור פטרוזליה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "צרור נענע",
         "price": 4.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/צרור נענע.jpg",
+        "section": "vegetables"
     },
     {
         "name": "צרור שמיר",
         "price": 4.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/צרור שמיר.jpg",
+        "section": "vegetables"
     },
     {
         "name": "צרור שיבא",
         "price": 7.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/צרור שיבא.jpg",
+        "section": "vegetables"
     },
     {
         "name": "לבבות חסה זנזורי",
         "price": 12.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/לבבות חסה זנזורי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "חסה לליק טרייה",
         "price": 15.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/חסה לליק טרייה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "דלעת",
         "price": 15.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/דלעת.jpg",
+        "section": "vegetables"
     },
     {
         "name": "דלורית",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/דלורית.jpg",
+        "section": "vegetables"
     },
     {
         "name": "חסה ערבית זנזורי",
         "price": 8.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/חסה ערבית זנזורי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "חסה עגולה (אייסברג)",
         "price": 8.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/חסה עגולה (אייסברג).jpg",
+        "section": "vegetables"
     },
     {
         "name": "סלרי עלים זנזורי",
         "price": 8.5,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/סלרי עלים זנזורי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "סלרי אמריקאי(קצוץ)",
         "price": 8.5,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/סלרי אמריקאי(קצוץ).jpg",
+        "section": "vegetables"
     },
     {
         "name": "סלק עלים",
         "price": 8.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/סלק עלים.jpg",
+        "section": "vegetables"
     },
     {
         "name": "שום מקולף 170 גרם",
         "price": 10.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/שום מקולף 170 גרם.jpg",
+        "section": "vegetables"
     },
     {
         "name": "שום מקולף 500 גרם",
         "price": 25.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/שום מקולף 500 גרם.jpg",
+        "section": "vegetables"
     },
     {
         "name": "חמציץ",
         "price": 12.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/חמציץ.jpg",
+        "section": "vegetables"
     },
     {
         "name": "קורנית(טימין) טרי",
         "price": 7.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/קורנית(טימין) טרי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "רוזמרין טרי",
         "price": 7.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/רוזמרין טרי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "בזיליקום טרי",
         "price": 7.0,
-        "units": "מארז"
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/בזיליקום טרי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תפוח אדמה אדום",
         "price": 7.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח אדמה אדום.jpg",
+        "section": "fruits"
     },
     {
         "name": "תפוח אדמה לבן",
         "price": 7.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח אדמה לבן.jpg",
+        "section": "fruits"
     },
     {
         "name": "תפוח אדמה אדום אפיה קטן",
         "price": 8.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח אדמה אדום אפיה קטן.jpg",
+        "section": "fruits"
     },
     {
         "name": "תפוח אדמה לבן קטן דוד משה",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח אדמה לבן קטן דוד משה.jpg",
+        "section": "fruits"
     },
     {
         "name": "תפוח אדמה אדום דוד משה",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח אדמה אדום דוד משה.jpg",
+        "section": "fruits"
     },
     {
         "name": "תפוח אדמה לבן דוד משה",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח אדמה לבן דוד משה.jpg",
+        "section": "fruits"
     },
     {
         "name": "עגבנית תמר ישראלית",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/עגבנית תמר ישראלית.jpg",
+        "section": "vegetables"
     },
     {
         "name": "לפת",
         "price": 12.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/לפת.jpg",
+        "section": "vegetables"
     },
     {
         "name": "ארטישוק",
         "price": 18.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/ארטישוק.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פרסה( לוף) טרי",
         "price": 28.0,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Vegetables/פרסה( לוף) טרי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תפוח זהוב קטן",
         "price": 9.8,
-        "units": "ק״ג"
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח זהוב קטן.jpg",
+        "section": "fruits"
     },
     {
         "name": "ראש סלרי",
         "price": 7.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/ראש סלרי.jpg",
+        "section": "vegetables"
     },
     {
         "name": "שורש פטרוזליה",
         "price": 7.0,
-        "units": "יחידה"
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/שורש פטרוזליה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "מיץ רימונים טבעי בקבוק ליטר",
         "price": 25.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/מיץ רימונים טבעי בקבוק ליטר.jpg",
+        "section": "vegetables"
     },
     {
         "name": "כוסברה גוש קטיף",
         "price": 6.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/כוסברה גוש קטיף.jpg",
+        "section": "vegetables"
     },
     {
         "name": "פטרוזליה גוש קטיף",
         "price": 6.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/פטרוזליה גוש קטיף.jpg",
+        "section": "vegetables"
     },
     {
         "name": "נענע גוש קטיף",
         "price": 6.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/נענע גוש קטיף.jpg",
+        "section": "vegetables"
     },
     {
         "name": "חסה רגילה גוש קטיף",
         "price": 8.0,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/חסה רגילה גוש קטיף.jpg",
+        "section": "vegetables"
     },
     {
         "name": "סלרי גוש קטיף",
         "price": 8.5,
-        "units": ""
+        "units": "",
+        "imagePath": "Images/Vegetables/סלרי גוש קטיף.jpg",
+        "section": "vegetables"
     }
 ]
