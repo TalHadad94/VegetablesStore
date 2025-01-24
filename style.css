@@ -85,6 +85,7 @@ nav ul li a.active::before {
 
 /* Sections */
 main section {
+    margin: 40px 0px 100px 0px;
     font-family: "Heebo", Arial, serif;
     transition: opacity 0.3s ease-out;
 }
@@ -192,5 +193,5 @@ main section:not(.active) {
 /* Footer */
 footer {
     text-align: center;
-    background-color: #219831;
+    background-color: #21983180;
 }
