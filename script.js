@@ -59,27 +59,20 @@ function generateItems() {
                 img.classList.add("product-img");
                 detailsContainer.appendChild(img);
 
-                itemDiv.appendChild(detailsContainer);
-
                 // Add text details
                 const textDetails = document.createElement("div");
                 textDetails.classList.add("text-details");
-
+                
                 const name = document.createElement("p");
                 name.textContent = item.name;
                 name.classList.add("item-name");
                 textDetails.appendChild(name);
-
+                
                 const price = document.createElement("p");
-                price.textContent = `מחיר: ${item.price.toFixed(2)} ₪`;
+                price.textContent = `מחיר: ${item.price.toFixed(2)} ₪ | ל${item.units}`;
                 price.classList.add("item-price");
                 textDetails.appendChild(price);
-
-                const units = document.createElement("p");
-                units.textContent = `כמות: ${item.units}`;
-                units.classList.add("item-units");
-                textDetails.appendChild(units);
-
+                
                 detailsContainer.appendChild(textDetails);
 
                 // Add quantity control buttons and display
@@ -98,11 +91,13 @@ function generateItems() {
                 increaseButton.textContent = "+";
                 increaseButton.classList.add("increase-button");
 
-                controlContainer.appendChild(decreaseButton);
-                controlContainer.appendChild(amountDisplay);
                 controlContainer.appendChild(increaseButton);
+                controlContainer.appendChild(amountDisplay);
+                controlContainer.appendChild(decreaseButton);
 
-                itemDiv.appendChild(controlContainer);
+                detailsContainer.appendChild(controlContainer);
+                
+                itemDiv.appendChild(detailsContainer);
 
                 // Add event listeners for quantity control
                 const basketList = document.getElementById('basket-list');
