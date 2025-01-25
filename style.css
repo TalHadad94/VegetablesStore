@@ -166,6 +166,7 @@ main section:not(.active) {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 0px 25px 0px 25px;
 }
 
 .product-item {

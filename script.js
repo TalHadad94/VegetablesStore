@@ -39,6 +39,15 @@ function generateItems() {
                 const detailsContainer = document.createElement("div");
                 detailsContainer.classList.add("details-container");
 
+                // Add product image
+                const img = document.createElement("img");
+                img.src = item.imagePath;
+                img.alt = item.name;
+                img.classList.add("product-img");
+                detailsContainer.appendChild(img);
+
+                itemDiv.appendChild(detailsContainer);
+
                 // Add text details
                 const textDetails = document.createElement("div");
                 textDetails.classList.add("text-details");
@@ -59,15 +68,6 @@ function generateItems() {
                 textDetails.appendChild(units);
 
                 detailsContainer.appendChild(textDetails);
-
-                // Add product image
-                const img = document.createElement("img");
-                img.src = item.imagePath;
-                img.alt = item.name;
-                img.classList.add("product-img");
-                detailsContainer.appendChild(img);
-
-                itemDiv.appendChild(detailsContainer);
 
                 // Add quantity control buttons and display
                 const controlContainer = document.createElement("div");
