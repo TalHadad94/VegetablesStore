@@ -189,6 +189,12 @@ main section:not(.active) {
     width: 25px;
 }
 
+.decrease-button,.increase-button {
+    border-radius: 50%;
+    color: #096115;
+    border: 1px solid #096115;
+}
+
 .menu {
     display: flex;
     flex-wrap: wrap;
