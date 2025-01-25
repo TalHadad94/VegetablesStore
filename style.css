@@ -120,10 +120,19 @@ main section:not(.active) {
     padding: 0 25px;
 }
 
+#about h2{
+    font-size: 21px;
+}
+
 #Slogen {
     font-family: "Amatic SC", Arial, serif;
     font-size: 26px;
     font-weight: bold;
+}
+
+.about-icons img{
+    width: 40px;
+    padding: 0px 0px 40px 0px;
 }
 
 /* Section Titles */
