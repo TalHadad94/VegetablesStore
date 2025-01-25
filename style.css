@@ -83,6 +83,20 @@ nav ul li a.active::before {
     height: 60%;
 }
 
+#main-nav {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    height: 45px;
+}
+    
+#main-nav.sticky {
+    position: fixed;
+    top: 0;
+}
+
 /* Sections */
 main section {
     margin: 40px 0px 100px 0px;
