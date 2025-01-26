@@ -224,6 +224,11 @@ main section:not(.active) {
     background-color: #3e8e41;
 }
 
+.remove-button {
+    border-radius: 50%;
+    background-color: #d93030ae;
+}
+
 /* Footer */
 footer {
     text-align: center;

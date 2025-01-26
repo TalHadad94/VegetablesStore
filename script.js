@@ -48,6 +48,7 @@ function generateItems() {
                 itemDiv.classList.add("product-item"); // Generic class for styling
                 itemDiv.dataset.name = item.name; // Store the item's name as a data attribute
                 itemDiv.dataset.unit = item.units; // Store the item's unit type
+                itemDiv.dataset.price = item.price; // Store the item's price
 
                 const detailsContainer = document.createElement("div");
                 detailsContainer.classList.add("details-container");
@@ -84,7 +85,7 @@ function generateItems() {
                 decreaseButton.classList.add("decrease-button");
 
                 const amountDisplay = document.createElement("span");
-                amountDisplay.textContent = item.units === "יחידה" || item.units === "מארז" ? "1" : "0.5";
+                amountDisplay.textContent = item.units === "יחידה" || item.units === "מארז" ? "0" : "0";
                 amountDisplay.classList.add("amount-display");
 
                 const increaseButton = document.createElement("button");
@@ -104,8 +105,8 @@ function generateItems() {
 
                 const updateBasket = (operation) => {
                     let amount = parseFloat(amountDisplay.textContent);
-                    const step = item.units === "יחידה" || item.units === "מארז" ? 1 : 0.1;
-                    const minAmount = item.units === "יחידה" || item.units === "מארז" ? 1 : 0.5;
+                    const step = item.units === "יחידה" || item.units === "מארז" ? 1 : 0.5;
+                    const minAmount = item.units === "יחידה" || item.units === "מארז" ? 0 : 0.0;
 
                     if (operation === "increase") {
                         amount += step;
@@ -161,9 +162,9 @@ function addBasketItem(itemName, amount) {
         unitSpan.textContent = ` ${document.querySelector(`[data-name="${itemName}"]`).dataset.unit}`;
 
         const removeButton = document.createElement('button');
+        removeButton.classList.add('remove-button');
         removeButton.textContent = 'הסר';
-        removeButton.style.marginLeft = '10px';
-        removeButton.style.backgroundColor = 'red';
+        removeButton.style.marginRight = '10px';
         removeButton.style.color = 'white';
         removeButton.style.border = 'none';
         removeButton.style.cursor = 'pointer';
