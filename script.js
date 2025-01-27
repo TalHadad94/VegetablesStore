@@ -147,12 +147,18 @@ function addBasketItem(itemName, amount) {
     const basketList = document.getElementById('basket-list');
     let listItem = Array.from(basketList.children).find(item => item.dataset.name === itemName);
 
+    // Check screen width and truncate itemName for smaller screens
+    const isSmallScreen = window.innerWidth < 600; // Adjust breakpoint as needed
+    const truncatedItemName = isSmallScreen && itemName.length > 20 
+        ? itemName.slice(0, 17) + '...' 
+        : itemName;
+
     if (!listItem) {
         listItem = document.createElement('li');
         listItem.dataset.name = itemName;
 
         const textSpan = document.createElement('span');
-        textSpan.textContent = `${itemName} - `;
+        textSpan.textContent = `${truncatedItemName} - `;
 
         const amountSpan = document.createElement('span');
         amountSpan.classList.add('item-amount');
