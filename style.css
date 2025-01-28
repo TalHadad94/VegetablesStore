@@ -236,6 +236,18 @@ main section:not(.active) {
     background-color: #d93030ae;
 }
 
+.sales {
+    padding: 30px 0px;
+    text-align: center;
+}
+
+.sales p {
+    margin: 0px 0px 0px 0px;
+    font-size: 18px; /* Adjust size as needed */
+    color: #096115; /* Base text color */
+    text-shadow: 0 0 10px rgba(200, 213, 18, 0.7), 0 0 20px rgba(184, 9, 9, 0.5), 0 0 30px rgba(180, 7, 7, 0.3); /* Glowing effect */
+}
+
 /* Footer */
 footer {
     text-align: center;

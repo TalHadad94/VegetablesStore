@@ -212,12 +212,21 @@ function addBasketItem(itemName, amount, price) {
     }
 }
 
-// Remove an item from the basket
+// Modify the removeBasketItem function to reset the item's amount in the product display
 function removeBasketItem(itemName) {
     const basketList = document.getElementById('basket-list');
     const listItem = Array.from(basketList.children).find(item => item.dataset.name === itemName);
 
     if (listItem) {
         basketList.removeChild(listItem);
+
+        // Find the item in the product section and reset the quantity to 0
+        const productItem = document.querySelector(`[data-name="${itemName}"]`);
+        if (productItem) {
+            const amountDisplay = productItem.querySelector('.amount-display');
+            if (amountDisplay) {
+                amountDisplay.textContent = "0";
+            }
+        }
     }
 }
