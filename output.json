@@ -591,43 +591,43 @@
         "name": "תפוח אדמה אדום",
         "price": 7.8,
         "units": "ק״ג",
-        "imagePath": "Images/Fruits/תפוח אדמה אדום.jpg",
-        "section": "fruits"
+        "imagePath": "Images/Vegetables/תפוח אדמה אדום.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תפוח אדמה לבן",
         "price": 7.8,
         "units": "ק״ג",
-        "imagePath": "Images/Fruits/תפוח אדמה לבן.jpg",
-        "section": "fruits"
+        "imagePath": "Images/Vegetables/תפוח אדמה לבן.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תפוח אדמה אדום אפיה קטן",
         "price": 8.8,
         "units": "ק״ג",
-        "imagePath": "Images/Fruits/תפוח אדמה אדום אפיה קטן.jpg",
-        "section": "fruits"
+        "imagePath": "Images/Vegetables/תפוח אדמה אדום אפיה קטן.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תפוח אדמה לבן קטן דוד משה",
         "price": 9.8,
         "units": "ק״ג",
-        "imagePath": "Images/Fruits/תפוח אדמה לבן קטן דוד משה.jpg",
-        "section": "fruits"
+        "imagePath": "Images/Vegetables/תפוח אדמה לבן קטן דוד משה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תפוח אדמה אדום דוד משה",
         "price": 9.8,
         "units": "ק״ג",
-        "imagePath": "Images/Fruits/תפוח אדמה אדום דוד משה.jpg",
-        "section": "fruits"
+        "imagePath": "Images/Vegetables/תפוח אדמה אדום דוד משה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "תפוח אדמה לבן דוד משה",
         "price": 9.8,
         "units": "ק״ג",
-        "imagePath": "Images/Fruits/תפוח אדמה לבן דוד משה.jpg",
-        "section": "fruits"
+        "imagePath": "Images/Vegetables/תפוח אדמה לבן דוד משה.jpg",
+        "section": "vegetables"
     },
     {
         "name": "עגבנית תמר ישראלית",

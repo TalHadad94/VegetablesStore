@@ -154,7 +154,7 @@ function addBasketItem(itemName, amount, price) {
         : itemName;
 
     // Calculate total price
-    const totalPrice = (amount * price).toFixed(2);
+    const ItemTotal = (amount * price).toFixed(2);
 
     if (!listItem) {
         listItem = document.createElement('li');
@@ -186,7 +186,7 @@ function addBasketItem(itemName, amount, price) {
         // Right side: Total price and remove button
         const priceSpan = document.createElement('span');
         priceSpan.style.marginRight = '10px';
-        priceSpan.textContent = `${totalPrice}₪`;
+        priceSpan.textContent = `${ItemTotal}₪`;
 
         const removeButton = document.createElement('button');
         removeButton.classList.add('remove-button');
@@ -208,7 +208,7 @@ function addBasketItem(itemName, amount, price) {
     } else {
         // Update amount and total price if item exists
         listItem.querySelector('span').textContent = `${truncatedItemName} - ${amount} ${document.querySelector(`[data-name="${itemName}"]`).dataset.unit}`;
-        listItem.querySelector(':nth-child(3)').textContent = `${totalPrice}₪`;
+        listItem.querySelector(':nth-child(3)').textContent = `${ItemTotal}₪`;
     }
 }
 
