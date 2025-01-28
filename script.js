@@ -120,7 +120,7 @@ function generateItems() {
                     if (amount === minAmount && operation === "decrease") {
                         removeBasketItem(item.name); // Remove if below minimum
                     } else {
-                        addBasketItem(item.name, amount); // Update basket
+                        addBasketItem(item.name, amount, item.price); // Update basket
                     }
                 };
 
@@ -143,47 +143,72 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Add or update item in the basket
-function addBasketItem(itemName, amount) {
+function addBasketItem(itemName, amount, price) {
     const basketList = document.getElementById('basket-list');
     let listItem = Array.from(basketList.children).find(item => item.dataset.name === itemName);
 
     // Check screen width and truncate itemName for smaller screens
     const isSmallScreen = window.innerWidth < 600; // Adjust breakpoint as needed
-    const truncatedItemName = isSmallScreen && itemName.length > 20 
-        ? itemName.slice(0, 17) + '...' 
+    const truncatedItemName = isSmallScreen && itemName.length > 22 
+        ? itemName.slice(0, 19) + '...' 
         : itemName;
+
+    // Calculate total price
+    const totalPrice = (amount * price).toFixed(2);
 
     if (!listItem) {
         listItem = document.createElement('li');
         listItem.dataset.name = itemName;
 
+        // Apply styles for spacing and list dots
+        listItem.style.display = 'flex';
+        listItem.style.alignItems = 'center';
+        listItem.style.justifyContent = 'space-between';
+        listItem.style.maxWidth = '600px';
+        listItem.style.padding = '0 10px'; // Ensure even padding
+        listItem.style.listStyleType = 'disc'; // Restore list dots
+
+        // Left side: Item details
         const textSpan = document.createElement('span');
-        textSpan.textContent = `${truncatedItemName} - `;
+        textSpan.style.flex = '1';
+        textSpan.style.whiteSpace = 'nowrap'; // Prevent wrapping
+        textSpan.textContent = `${truncatedItemName} - ${amount} ${document.querySelector(`[data-name="${itemName}"]`).dataset.unit}`;
 
-        const amountSpan = document.createElement('span');
-        amountSpan.classList.add('item-amount');
-        amountSpan.textContent = amount;
+        // Separator: Dots // ! Disabled it 28.1.25
+        const dotsSpan = document.createElement('span');
+        dotsSpan.style.flex = '1';
+        dotsSpan.style.textAlign = 'center';
+        dotsSpan.style.overflow = 'hidden';
+        dotsSpan.style.whiteSpace = 'nowrap';
+        dotsSpan.style.textOverflow = 'ellipsis';
+        dotsSpan.textContent = '.'.repeat(0); // Adjust number of dots as needed
 
-        const unitSpan = document.createElement('span');
-        unitSpan.textContent = ` ${document.querySelector(`[data-name="${itemName}"]`).dataset.unit}`;
+        // Right side: Total price and remove button
+        const priceSpan = document.createElement('span');
+        priceSpan.style.marginRight = '10px';
+        priceSpan.textContent = `${totalPrice}₪`;
 
         const removeButton = document.createElement('button');
         removeButton.classList.add('remove-button');
         removeButton.textContent = 'הסר';
-        removeButton.style.marginRight = '10px';
+        removeButton.style.marginLeft = '10px'; // Add spacing from the edge
         removeButton.style.color = 'white';
         removeButton.style.border = 'none';
         removeButton.style.cursor = 'pointer';
 
         removeButton.addEventListener('click', () => removeBasketItem(itemName));
 
-        listItem.appendChild(textSpan);
-        listItem.appendChild(amountSpan);
-        listItem.appendChild(unitSpan);
-        listItem.appendChild(removeButton);
+        // Assemble list item
+        listItem.appendChild(textSpan); // Item details on the left
+        listItem.appendChild(dotsSpan); // Separator in the middle
+        listItem.appendChild(priceSpan); // Total price on the right
+        listItem.appendChild(removeButton); // Button on the far right
+
         basketList.appendChild(listItem);
     } else {
-        listItem.querySelector('.item-amount').textContent = amount;
+        // Update amount and total price if item exists
+        listItem.querySelector('span').textContent = `${truncatedItemName} - ${amount} ${document.querySelector(`[data-name="${itemName}"]`).dataset.unit}`;
+        listItem.querySelector(':nth-child(3)').textContent = `${totalPrice}₪`;
     }
 }
 
