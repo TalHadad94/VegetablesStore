@@ -174,15 +174,6 @@ function addBasketItem(itemName, amount, price) {
         textSpan.style.whiteSpace = 'nowrap'; // Prevent wrapping
         textSpan.textContent = `${truncatedItemName} - ${amount} ${document.querySelector(`[data-name="${itemName}"]`).dataset.unit}`;
 
-        // Separator: Dots // ! Disabled it 28.1.25
-        const dotsSpan = document.createElement('span');
-        dotsSpan.style.flex = '1';
-        dotsSpan.style.textAlign = 'center';
-        dotsSpan.style.overflow = 'hidden';
-        dotsSpan.style.whiteSpace = 'nowrap';
-        dotsSpan.style.textOverflow = 'ellipsis';
-        dotsSpan.textContent = '.'.repeat(0); // Adjust number of dots as needed
-
         // Right side: Total price and remove button
         const priceSpan = document.createElement('span');
         priceSpan.style.marginRight = '10px';
@@ -200,7 +191,6 @@ function addBasketItem(itemName, amount, price) {
 
         // Assemble list item
         listItem.appendChild(textSpan); // Item details on the left
-        listItem.appendChild(dotsSpan); // Separator in the middle
         listItem.appendChild(priceSpan); // Total price on the right
         listItem.appendChild(removeButton); // Button on the far right
 
@@ -208,8 +198,11 @@ function addBasketItem(itemName, amount, price) {
     } else {
         // Update amount and total price if item exists
         listItem.querySelector('span').textContent = `${truncatedItemName} - ${amount} ${document.querySelector(`[data-name="${itemName}"]`).dataset.unit}`;
-        listItem.querySelector(':nth-child(3)').textContent = `${ItemTotal}₪`;
+        listItem.querySelector(':nth-child(2)').textContent = `${ItemTotal}₪`;
     }
+
+    // Check if the basket has items and toggle visibility
+    toggleBasketVisibility();
 }
 
 // Modify the removeBasketItem function to reset the item's amount in the product display
@@ -229,4 +222,27 @@ function removeBasketItem(itemName) {
             }
         }
     }
+
+    // Check if the basket has items and toggle visibility
+    toggleBasketVisibility();
 }
+
+// Function to toggle the visibility of the empty/full basket
+function toggleBasketVisibility() {
+    const basketList = document.getElementById('basket-list');
+    const basketEmpty = document.getElementById('basket-empty');
+    const basketFull = document.getElementById('basket-full');
+
+    if (basketList.children.length === 0) {
+        basketEmpty.style.display = 'block';
+        basketFull.style.display = 'none';
+    } else {
+        basketEmpty.style.display = 'none';
+        basketFull.style.display = 'block';
+    }
+}
+
+// Initialize visibility when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    toggleBasketVisibility();
+});

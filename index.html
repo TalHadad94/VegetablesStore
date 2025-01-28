@@ -66,10 +66,18 @@
 
         <section id="basket" style="display: none;">
             <h2>הסל שלי</h2>
-            <ul id="basket-list">
-                <!-- Basket items will appear here -->
-            </ul>
-            <div class="sales">
+            <div id="basket-empty">
+                <p>- הסל ריק &#128558; -</p>
+                <p>אני רוצה לקטוף...</p>
+                <a href="#vegetables" aria-label="ירקות">ירקות</a>
+                <a href="#fruits" aria-label="פירות">פירות</a>
+            </div>
+            <div id="basket-full">
+                <ul id="basket-list">
+                    <!-- Basket items will appear here -->
+                </ul>
+            </div>
+            <div id="sales">
                 <p>בקניה מעל ₪199</p>
                 <p>מיץ רימונים טבעי במתנה</p>
             </div>

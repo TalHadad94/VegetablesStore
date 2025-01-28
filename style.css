@@ -224,6 +224,10 @@ main section:not(.active) {
     background-color: #3e8e41;
 }
 
+#basket-empty {
+    text-align: center;
+}
+
 #basket-list {
     list-style: disc inside; /* Maintain list dots */
     padding: 0;
@@ -236,12 +240,12 @@ main section:not(.active) {
     background-color: #d93030ae;
 }
 
-.sales {
+#sales {
     padding: 30px 0px;
     text-align: center;
 }
 
-.sales p {
+#sales p {
     margin: 0px 0px 0px 0px;
     font-size: 18px; /* Adjust size as needed */
     color: #096115; /* Base text color */
