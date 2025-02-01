@@ -12,27 +12,36 @@ navbar.classList.remove("sticky");
 });
 
 // Show the active main section with error handling and optimizations
-document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default link behavior
+function handleLinkClick(e) {
+    e.preventDefault(); // Prevent default link behavior
 
-        // Hide all sections
-        document.querySelectorAll('main section').forEach(section => {
-            if (section) {
-                section.style.display = 'none';
-                section.classList.remove('active');
-            }
-        });
-
-        // Show the correct section
-        const sectionId = this.getAttribute('href').slice(1); // Remove '#' from href
-        const section = document.getElementById(sectionId);
+    // Hide all sections
+    document.querySelectorAll('main section').forEach(section => {
         if (section) {
-            section.style.display = 'block';
-            section.classList.add('active');
+            section.style.display = 'none';
+            section.classList.remove('active');
         }
     });
+
+    // Show the correct section
+    const sectionId = this.getAttribute('href').slice(1); // Remove '#' from href
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.style.display = 'block';
+        section.classList.add('active');
+    }
+}
+
+// Attach event listeners to navigation links
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', handleLinkClick);
 });
+
+// Attach event listeners to basket-empty links
+document.querySelectorAll('#basket-empty a').forEach(link => {
+    link.addEventListener('click', handleLinkClick);
+});
+
 
 // Function to dynamically generate items and attach advanced basket controls
 function generateItems() {
@@ -141,6 +150,7 @@ function generateItems() {
 document.addEventListener("DOMContentLoaded", () => {
     generateItems();
 });
+
 
 // Add or update item in the basket
 function addBasketItem(itemName, amount, price) {

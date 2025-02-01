@@ -206,10 +206,6 @@ main section:not(.active) {
     text-align: center;
 }
 
-.product-item img:hover {
-    transform: scale(1.1);
-}
-
 .add-to-basket {
     background-color: #4CAF50;
     color: white;
@@ -229,6 +225,15 @@ main section:not(.active) {
     font-family: "Amatic SC", Arial, sans-serif;
     font-size: 22px;
     font-weight: bold;
+}
+
+#basket-empty a {
+    color: inherit; /* Inherit text color */
+}
+
+#basket-empty img {
+    margin-top: -20px;
+    width: 80px;
 }
 
 #basket-list {
