@@ -226,6 +226,9 @@ main section:not(.active) {
 
 #basket-empty {
     text-align: center;
+    font-family: "Amatic SC", Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 #basket-list {
@@ -240,8 +243,19 @@ main section:not(.active) {
     background-color: #d93030ae;
 }
 
+#total-price-container {
+    padding: 30px;
+    text-align: left;
+    font-weight: bold;
+}
+
+#notes {
+    font-size: 14px;
+    padding: 0px 10px;
+}
+
 #sales {
-    padding: 30px 0px;
+    padding: 60px 0px;
     text-align: center;
 }
 

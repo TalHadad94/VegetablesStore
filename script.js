@@ -148,7 +148,7 @@ function addBasketItem(itemName, amount, price) {
     let listItem = Array.from(basketList.children).find(item => item.dataset.name === itemName);
 
     // Check screen width and truncate itemName for smaller screens
-    const isSmallScreen = window.innerWidth < 600; // Adjust breakpoint as needed
+    const isSmallScreen = window.innerWidth < 600;
     const truncatedItemName = isSmallScreen && itemName.length > 22 
         ? itemName.slice(0, 19) + '...' 
         : itemName;
@@ -165,13 +165,13 @@ function addBasketItem(itemName, amount, price) {
         listItem.style.alignItems = 'center';
         listItem.style.justifyContent = 'space-between';
         listItem.style.maxWidth = '600px';
-        listItem.style.padding = '0 10px'; // Ensure even padding
-        listItem.style.listStyleType = 'disc'; // Restore list dots
+        listItem.style.padding = '0 10px';
+        listItem.style.listStyleType = 'disc';
 
         // Left side: Item details
         const textSpan = document.createElement('span');
         textSpan.style.flex = '1';
-        textSpan.style.whiteSpace = 'nowrap'; // Prevent wrapping
+        textSpan.style.whiteSpace = 'nowrap';
         textSpan.textContent = `${truncatedItemName} - ${amount} ${document.querySelector(`[data-name="${itemName}"]`).dataset.unit}`;
 
         // Right side: Total price and remove button
@@ -182,26 +182,27 @@ function addBasketItem(itemName, amount, price) {
         const removeButton = document.createElement('button');
         removeButton.classList.add('remove-button');
         removeButton.textContent = 'הסר';
-        removeButton.style.marginLeft = '10px'; // Add spacing from the edge
+        removeButton.style.marginLeft = '10px';
         removeButton.style.color = 'white';
         removeButton.style.border = 'none';
         removeButton.style.cursor = 'pointer';
 
-        removeButton.addEventListener('click', () => removeBasketItem(itemName));
+        removeButton.addEventListener('click', () => {
+            removeBasketItem(itemName);
+            updateTotalPrice();
+        });
 
-        // Assemble list item
-        listItem.appendChild(textSpan); // Item details on the left
-        listItem.appendChild(priceSpan); // Total price on the right
-        listItem.appendChild(removeButton); // Button on the far right
+        listItem.appendChild(textSpan);
+        listItem.appendChild(priceSpan);
+        listItem.appendChild(removeButton);
 
         basketList.appendChild(listItem);
     } else {
-        // Update amount and total price if item exists
         listItem.querySelector('span').textContent = `${truncatedItemName} - ${amount} ${document.querySelector(`[data-name="${itemName}"]`).dataset.unit}`;
-        listItem.querySelector(':nth-child(2)').textContent = `${ItemTotal}₪`;
+        listItem.querySelector(':nth-child(2)').textContent = `₪${ItemTotal}`;
     }
 
-    // Check if the basket has items and toggle visibility
+    updateTotalPrice();
     toggleBasketVisibility();
 }
 
@@ -213,7 +214,6 @@ function removeBasketItem(itemName) {
     if (listItem) {
         basketList.removeChild(listItem);
 
-        // Find the item in the product section and reset the quantity to 0
         const productItem = document.querySelector(`[data-name="${itemName}"]`);
         if (productItem) {
             const amountDisplay = productItem.querySelector('.amount-display');
@@ -223,8 +223,21 @@ function removeBasketItem(itemName) {
         }
     }
 
-    // Check if the basket has items and toggle visibility
+    updateTotalPrice();
     toggleBasketVisibility();
+}
+
+// Function to update total price
+function updateTotalPrice() {
+    const basketList = document.getElementById('basket-list');
+    let total = 0;
+    
+    basketList.querySelectorAll('li').forEach(item => {
+        const priceText = item.querySelector(':nth-child(2)').textContent;
+        total += parseFloat(priceText.replace('₪', '')) || 0;
+    });
+
+    document.getElementById('total-price').textContent = '₪' + total.toFixed(2);
 }
 
 // Function to toggle the visibility of the empty/full basket
@@ -245,4 +258,5 @@ function toggleBasketVisibility() {
 // Initialize visibility when the page loads
 document.addEventListener("DOMContentLoaded", () => {
     toggleBasketVisibility();
+    updateTotalPrice();
 });
