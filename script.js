@@ -29,6 +29,9 @@ function handleLinkClick(e) {
     if (section) {
         section.style.display = 'block';
         section.classList.add('active');
+        
+        // Scroll to the section smoothly
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
@@ -187,7 +190,7 @@ function addBasketItem(itemName, amount, price) {
         // Right side: Total price and remove button
         const priceSpan = document.createElement('span');
         priceSpan.style.marginRight = '10px';
-        priceSpan.textContent = `${ItemTotal}₪`;
+        priceSpan.textContent = `₪${ItemTotal}`;
 
         const removeButton = document.createElement('button');
         removeButton.classList.add('remove-button');

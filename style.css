@@ -52,6 +52,7 @@ nav ul li a {
     font-size: 18px;
     text-decoration: none;
     color: white;
+    font-weight: bold;
     overflow: hidden;
     z-index: 0;
     transition: color 0.3s;
@@ -225,7 +226,7 @@ main section:not(.active) {
 #basket-empty {
     text-align: center;
     font-family: "Amatic SC", Arial, sans-serif;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: bold;
 }
 
