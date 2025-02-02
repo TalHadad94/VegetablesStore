@@ -21,10 +21,10 @@
         "section": "fruits"
     },
     {
-        "name": "סלק וואקום מוכן",
+        "name": "סלק וואקום מוכן (550 גרם)",
         "price": 8.9,
-        "units": "מארז(550 גרם)",
-        "imagePath": "Images/Vegetables/סלק וואקום מוכן.jpg",
+        "units": "מארז",
+        "imagePath": "Images/Vegetables/סלק וואקום מוכן (550 גרם).jpg",
         "section": "vegetables"
     },
     {
