@@ -229,10 +229,12 @@ main section:not(.active) {
 
 #basket-empty a {
     color: inherit; /* Inherit text color */
+    text-decoration: none;
 }
 
 #basket-empty img {
     margin-top: -20px;
+    margin-bottom: -10px;
     width: 80px;
 }
 
