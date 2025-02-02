@@ -1,4 +1,4 @@
 # VegetablesStore
 Fruit and vegetables online store
 
-Phone view only
+Phone view only (For now).

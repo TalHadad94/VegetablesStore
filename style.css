@@ -38,7 +38,6 @@ nav ul {
     display: flex;
     background-color: #a8e08a;
     border-radius: 20px;
-    opacity: 0.92;
 }
 
 nav ul li {
@@ -84,7 +83,7 @@ nav ul li a.active::before {
 }
 
 #main-nav {
-    padding: 10px;
+    padding: 23px 0px;
     text-align: center;
     width: 100%;
     position: relative;
@@ -157,14 +156,16 @@ main section:not(.active) {
 
 /* Products and Basket */
 .details-container {
+    width: 100%;
     display: flex;
     align-items: center;
+    text-align: center;
     gap: 5px;
 }
 
 .text-details {
     text-align: right;
-    width: 210px;
+    width: 100%;
 }
 
 .item-name {
@@ -198,12 +199,13 @@ main section:not(.active) {
 .menu {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     padding: 0px 25px 0px 25px;
 }
 
 .product-item {
     text-align: center;
+    width: 100%;
 }
 
 .add-to-basket {
