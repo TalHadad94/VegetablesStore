@@ -120,12 +120,12 @@ main section:not(.active) {
 }
 
 #about h2{
-    font-size: 21px;
+    font-size: 18px;
 }
 
 #Slogen {
     font-family: "Amatic SC", Arial, serif;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: bold;
 }
 
