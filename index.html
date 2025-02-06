@@ -88,6 +88,25 @@
                 <div id="notes">
                     <p>שימו &#129505 משלוח עד הבית הוא מ - ₪130 ומעלה</p>
                 </div>
+                <div id="customer-preference">
+                    <button id="delivery" disabled>משלוח עד הבית</button>
+                    <button id="pick-up">איסוף עצמי</button>
+                </div>
+                <div id="popup" class="hidden">
+                    <div id="popup-content">
+                        <p id="popup-message"></p>
+                        <label>Address: <input type="text" id="address"></label>
+                        <label>Payment:
+                            <select id="payment-method">
+                                <option value="credit-card">Credit Card</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="cash">Cash</option>
+                            </select>
+                        </label>
+                        <button id="confirm-payment">Confirm</button>
+                        <button id="close-popup">Close</button>
+                    </div>
+                </div>
             </div>
             <div id="sales">
                 <p>בקניה מעל ₪199</p>

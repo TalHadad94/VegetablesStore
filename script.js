@@ -241,6 +241,10 @@ function removeBasketItem(itemName) {
 }
 
 // Function to update total price
+document.getElementById('pick-up').addEventListener('click', () => openPopup('Pick Up'));
+document.getElementById('delivery').addEventListener('click', () => openPopup('Delivery'));
+document.getElementById('close-popup').addEventListener('click', () => closePopup());
+
 function updateTotalPrice() {
     const basketList = document.getElementById('basket-list');
     let total = 0;
@@ -251,6 +255,19 @@ function updateTotalPrice() {
     });
 
     document.getElementById('total-price').textContent = '₪' + total.toFixed(2);
+    
+    // Enable delivery button only if total > 130
+    document.getElementById('delivery').disabled = total <= 129;
+}
+
+function openPopup(type) {
+    const total = document.getElementById('total-price').textContent;
+    document.getElementById('popup-message').textContent = `${type} - Total: ${total}`;
+    document.getElementById('popup').classList.remove('hidden');
+}
+
+function closePopup() {
+    document.getElementById('popup').classList.add('hidden');
 }
 
 // Function to toggle the visibility of the empty/full basket
