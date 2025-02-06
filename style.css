@@ -13,7 +13,7 @@ body {
     font-family: Arial, sans-serif;
     direction: rtl;
     text-align: right;
-    background: url('Images/Section background.png') no-repeat fixed center;
+    background: url('Images/Section background.png') no-repeat fixed;
     background-size: cover;
 }
 
@@ -175,7 +175,7 @@ main section:not(.active) {
 }
 
 .item-price {
-    font-size: 13px;
+    font-size: 14px;
     color: #000000;
 }
 

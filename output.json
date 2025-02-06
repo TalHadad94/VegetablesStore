@@ -9,7 +9,7 @@
     {
         "name": "אגס ישראלי",
         "price": 18.5,
-        "units": "קג",
+        "units": "ק\"ג",
         "imagePath": "Images/Fruits/אגס ישראלי.jpg",
         "section": "fruits"
     },
@@ -343,9 +343,16 @@
         "section": "vegetables"
     },
     {
+        "name": "שרוול שום",
+        "price": 10.0,
+        "units": "יחידה",
+        "imagePath": "Images/Vegetables/שרוול שום.jpg",
+        "section": "vegetables"
+    },
+    {
         "name": "חבילת צנוניות טריות",
         "price": 6.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/חבילת צנוניות טריות.jpg",
         "section": "vegetables"
     },
@@ -457,35 +464,35 @@
     {
         "name": "צרור כוסברה",
         "price": 4.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/צרור כוסברה.jpg",
         "section": "vegetables"
     },
     {
         "name": "צרור פטרוזליה",
         "price": 4.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/צרור פטרוזליה.jpg",
         "section": "vegetables"
     },
     {
         "name": "צרור נענע",
         "price": 4.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/צרור נענע.jpg",
         "section": "vegetables"
     },
     {
         "name": "צרור שמיר",
         "price": 4.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/צרור שמיר.jpg",
         "section": "vegetables"
     },
     {
         "name": "צרור שיבא",
         "price": 7.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/צרור שיבא.jpg",
         "section": "vegetables"
     },
@@ -555,14 +562,14 @@
     {
         "name": "שום מקולף 170 גרם",
         "price": 10.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/שום מקולף 170 גרם.jpg",
         "section": "vegetables"
     },
     {
         "name": "שום מקולף 500 גרם",
         "price": 25.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/שום מקולף 500 גרם.jpg",
         "section": "vegetables"
     },
@@ -658,10 +665,10 @@
         "section": "vegetables"
     },
     {
-        "name": "פרסה( לוף) טרי",
+        "name": "פרסה (לוף) טרי",
         "price": 28.0,
         "units": "ק״ג",
-        "imagePath": "Images/Vegetables/פרסה( לוף) טרי.jpg",
+        "imagePath": "Images/Vegetables/פרסה (לוף) טרי.jpg",
         "section": "vegetables"
     },
     {
@@ -669,6 +676,13 @@
         "price": 9.8,
         "units": "ק״ג",
         "imagePath": "Images/Fruits/תפוח זהוב קטן.jpg",
+        "section": "fruits"
+    },
+    {
+        "name": "תפוח ירוק גראנד סמיט קטן",
+        "price": 9.8,
+        "units": "ק״ג",
+        "imagePath": "Images/Fruits/תפוח ירוק גראנד סמיט קטן.jpg",
         "section": "fruits"
     },
     {
@@ -688,42 +702,42 @@
     {
         "name": "מיץ רימונים טבעי בקבוק ליטר",
         "price": 25.0,
-        "units": "",
+        "units": "יחידה",
         "imagePath": "Images/Fruits/מיץ רימונים טבעי בקבוק ליטר.jpg",
         "section": "fruits"
     },
     {
         "name": "כוסברה גוש קטיף",
         "price": 6.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/כוסברה גוש קטיף.jpg",
         "section": "vegetables"
     },
     {
         "name": "פטרוזליה גוש קטיף",
         "price": 6.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/פטרוזליה גוש קטיף.jpg",
         "section": "vegetables"
     },
     {
         "name": "נענע גוש קטיף",
         "price": 6.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/נענע גוש קטיף.jpg",
         "section": "vegetables"
     },
     {
         "name": "חסה רגילה גוש קטיף",
         "price": 8.0,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/חסה רגילה גוש קטיף.jpg",
         "section": "vegetables"
     },
     {
         "name": "סלרי גוש קטיף",
         "price": 8.5,
-        "units": "",
+        "units": "מארז",
         "imagePath": "Images/Vegetables/סלרי גוש קטיף.jpg",
         "section": "vegetables"
     }
