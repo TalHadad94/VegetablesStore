@@ -96,20 +96,37 @@
                 <div id="popup" class="hidden">
                     <div id="popup-content">
                         <p id="popup-message"></p>
+
                         <label id="address-label">כתובת למשלוח:</label>
-                        <input type="text" id="address" placeholder="הכנס כתובת למשלוח">
+                        <input type="text" id="address" placeholder="הכנס כתובת למשלוח" required>
 
                         <label id="phone-label">מספר טלפון:</label>
-                        <input type="text" id="phone" placeholder="הכנס מספר טלפון">
+                        <input type="text" id="phone" placeholder="הכנס מספר טלפון" required>
 
                         <label>תשלום ב:
-                            <select id="payment-method">
+                            <select id="payment-method" required>
+                                <option value="">בחר אמצעי תשלום</option>
                                 <option value="credit-card">כרטיס אשראי</option>
                                 <option value="paypal">PayPal</option>
                             </select>
                         </label>
-                        
-                        <button id="confirm-payment">אישור</button>
+
+                        <!-- Hidden credit card fields -->
+                        <div id="credit-card-fields" class="hidden">
+                            <label>שם בעל הכרטיס:</label>
+                            <input type="text" id="card-name" placeholder="שם מלא על הכרטיס">
+
+                            <label>מספר כרטיס:</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+
+                            <label>תוקף:</label>
+                            <input type="text" id="expiry-date" placeholder="MM/YY">
+
+                            <label>CVC:</label>
+                            <input type="text" id="cvc" placeholder="123">
+                        </div>
+
+                        <button id="confirm-payment" disabled>אישור</button>
                         <button id="close-popup">סגור</button>
                     </div>
                 </div>

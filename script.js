@@ -270,6 +270,27 @@ function updateTotalPrice() {
     document.getElementById('delivery').disabled = total <= 129;
 }
 
+// Function to toggle the visibility of the empty/full basket
+function toggleBasketVisibility() {
+    const basketList = document.getElementById('basket-list');
+    const basketEmpty = document.getElementById('basket-empty');
+    const basketFull = document.getElementById('basket-full');
+
+    if (basketList.children.length === 0) {
+        basketEmpty.style.display = 'block';
+        basketFull.style.display = 'none';
+    } else {
+        basketEmpty.style.display = 'none';
+        basketFull.style.display = 'block';
+    }
+}
+
+// Initialize visibility when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    toggleBasketVisibility();
+    updateTotalPrice();
+});
+
 function openPopup(type) {
     const total = document.getElementById('total-price').textContent;
     document.getElementById('popup-message').textContent = `סה"כ לתשלום: ${total}`;
@@ -295,23 +316,65 @@ function closePopup() {
     document.getElementById('popup').classList.add('hidden');
 }
 
-// Function to toggle the visibility of the empty/full basket
-function toggleBasketVisibility() {
-    const basketList = document.getElementById('basket-list');
-    const basketEmpty = document.getElementById('basket-empty');
-    const basketFull = document.getElementById('basket-full');
+// Validation & Logic in pop-up
+document.addEventListener("DOMContentLoaded", function () {
+    const addressInput = document.getElementById("address");
+    const phoneInput = document.getElementById("phone");
+    const paymentMethod = document.getElementById("payment-method");
+    const confirmButton = document.getElementById("confirm-payment");
+    const creditCardFields = document.getElementById("credit-card-fields");
+    const cardInputs = creditCardFields.querySelectorAll("input");
 
-    if (basketList.children.length === 0) {
-        basketEmpty.style.display = 'block';
-        basketFull.style.display = 'none';
-    } else {
-        basketEmpty.style.display = 'none';
-        basketFull.style.display = 'block';
+    // Function to validate an Israeli phone number
+    function isValidPhone(phone) {
+        return /^05\d{8}$/.test(phone);
     }
-}
 
-// Initialize visibility when the page loads
-document.addEventListener("DOMContentLoaded", () => {
-    toggleBasketVisibility();
-    updateTotalPrice();
+    // Function to validate an address (basic check, can be improved)
+    function isValidAddress(address) {
+        return address.length > 5; // Adjust as needed
+    }
+
+    // Function to validate credit card fields
+    function isValidCard() {
+        const cardName = document.getElementById("card-name").value.trim();
+        const cardNumber = document.getElementById("card-number").value.replace(/\s+/g, "");
+        const expiryDate = document.getElementById("expiry-date").value;
+        const cvc = document.getElementById("cvc").value;
+
+        return (
+            cardName.length > 2 &&
+            /^\d{16}$/.test(cardNumber) &&
+            /^\d{2}\/\d{2}$/.test(expiryDate) &&
+            /^\d{3}$/.test(cvc)
+        );
+    }
+
+    // Function to check if all fields are valid
+    function validateForm() {
+        const addressValid = isValidAddress(addressInput.value);
+        const phoneValid = isValidPhone(phoneInput.value);
+        const paymentValid = paymentMethod.value !== "";
+        let cardValid = true;
+
+        if (paymentMethod.value === "credit-card") {
+            cardValid = isValidCard();
+        }
+
+        confirmButton.disabled = !(addressValid && phoneValid && paymentValid && cardValid);
+    }
+
+    // Event listeners
+    addressInput.addEventListener("input", validateForm);
+    phoneInput.addEventListener("input", validateForm);
+    paymentMethod.addEventListener("change", function () {
+        if (this.value === "credit-card") {
+            creditCardFields.classList.remove("hidden");
+        } else {
+            creditCardFields.classList.add("hidden");
+        }
+        validateForm();
+    });
+
+    cardInputs.forEach(input => input.addEventListener("input", validateForm));
 });
