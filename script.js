@@ -245,6 +245,16 @@ document.getElementById('pick-up').addEventListener('click', () => openPopup('Pi
 document.getElementById('delivery').addEventListener('click', () => openPopup('Delivery'));
 document.getElementById('close-popup').addEventListener('click', () => closePopup());
 
+// Close the pop-up if the user clicks outside of it
+document.addEventListener('click', (event) => {
+    const popup = document.getElementById('popup');
+    const popupContent = document.getElementById('popup-content');
+
+    if (!popupContent.contains(event.target) && !event.target.closest('#customer-preference')) {
+        closePopup();
+    }
+});
+
 function updateTotalPrice() {
     const basketList = document.getElementById('basket-list');
     let total = 0;
@@ -262,7 +272,22 @@ function updateTotalPrice() {
 
 function openPopup(type) {
     const total = document.getElementById('total-price').textContent;
-    document.getElementById('popup-message').textContent = `${type} - Total: ${total}`;
+    document.getElementById('popup-message').textContent = `סה"כ לתשלום: ${total}`;
+    
+    const addressLabel = document.getElementById('address-label');
+    const addressInput = document.getElementById('address');
+
+    if (type === 'Delivery') {
+        addressLabel.textContent = "כתובת למשלוח:";
+        addressInput.value = "";
+        addressInput.placeholder = "הכנס כתובת למשלוח";
+        addressInput.disabled = false;
+    } else {
+        addressLabel.textContent = "כתובת לאיסוף:";
+        addressInput.value = "חיים משה שפירא 17, אשדוד";
+        addressInput.disabled = true;
+    }
+
     document.getElementById('popup').classList.remove('hidden');
 }
 

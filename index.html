@@ -92,19 +92,25 @@
                     <button id="delivery" disabled>משלוח עד הבית</button>
                     <button id="pick-up">איסוף עצמי</button>
                 </div>
+                <!-- Pop-up (Hidden Initially) -->
                 <div id="popup" class="hidden">
                     <div id="popup-content">
                         <p id="popup-message"></p>
-                        <label>Address: <input type="text" id="address"></label>
-                        <label>Payment:
+                        <label id="address-label">כתובת למשלוח:</label>
+                        <input type="text" id="address" placeholder="הכנס כתובת למשלוח">
+
+                        <label id="phone-label">מספר טלפון:</label>
+                        <input type="text" id="phone" placeholder="הכנס מספר טלפון">
+
+                        <label>תשלום ב:
                             <select id="payment-method">
-                                <option value="credit-card">Credit Card</option>
+                                <option value="credit-card">כרטיס אשראי</option>
                                 <option value="paypal">PayPal</option>
-                                <option value="cash">Cash</option>
                             </select>
                         </label>
-                        <button id="confirm-payment">Confirm</button>
-                        <button id="close-popup">Close</button>
+                        
+                        <button id="confirm-payment">אישור</button>
+                        <button id="close-popup">סגור</button>
                     </div>
                 </div>
             </div>
