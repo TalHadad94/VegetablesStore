@@ -48,7 +48,7 @@ document.querySelectorAll('#basket-empty a').forEach(link => {
 
 // Function to dynamically generate items and attach advanced basket controls
 function generateItems() {
-    fetch('../Data/output.json') // Fetch data from the JSON file
+    fetch('output.json') // Fetch data from the JSON file
         .then(response => response.json())
         .then(items => {
             // Clear previous items in sections
