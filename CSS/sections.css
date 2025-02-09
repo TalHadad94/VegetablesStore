@@ -1,0 +1,57 @@
+/* Sections */
+main section {
+    margin: 40px 0px 100px 0px;
+    font-family: "Heebo", Arial, serif;
+    transition: opacity 0.3s ease-out;
+}
+
+main section.active {
+    opacity: 1;
+    display: block;
+}
+
+main section:not(.active) {
+    opacity: 0;
+    display: none;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    padding: 0 25px;
+}
+
+#about h2{
+    font-size: 18px;
+}
+
+#Slogen {
+    font-family: "Amatic SC", Arial, serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.about-icons img{
+    width: 40px;
+    padding: 0px 0px 40px 0px;
+}
+
+/* Section Titles */
+#vegetables h2,
+#fruits h2,
+#basket h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#vegetables h2 {
+    font-family: "Rubik Dirt", Arial, serif;
+}
+
+#fruits h2 {
+    font-family: "Rubik Gemstones", Arial, serif;
+}
+
+#basket h2 {
+    font-family: "Rubik Doodle Shadow", Arial, serif;
+}
