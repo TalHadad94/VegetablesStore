@@ -55,3 +55,8 @@ main section:not(.active) {
 #basket h2 {
     font-family: "Rubik Doodle Shadow", Arial, serif;
 }
+
+.search {
+    text-align: center;
+    margin: -10px 0px 20px 0px;
+}
