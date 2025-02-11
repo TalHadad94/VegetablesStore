@@ -1,3 +1,22 @@
+// Navbar Scroll Fix
+document.querySelectorAll("#main-nav a").forEach(link => {
+    link.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default jump
+        let targetId = this.getAttribute("href").substring(1); // Get section ID
+        let targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            let headerHeight = document.querySelector("header").offsetHeight; // Get header height
+            let targetPosition = targetElement.offsetTop - headerHeight; // Adjust for header
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth" // Smooth scroll effect
+            });
+        }
+    });
+});
+
 // Function to dynamically generate items and attach advanced basket controls
 function generateItems() {
     fetch('output.json') // Fetch data from the JSON file
@@ -193,20 +212,6 @@ function removeBasketItem(itemName) {
 }
 
 // Function to update total price
-document.getElementById('pick-up').addEventListener('click', () => openPopup('Pick Up'));
-document.getElementById('delivery').addEventListener('click', () => openPopup('Delivery'));
-document.getElementById('close-popup').addEventListener('click', () => closePopup());
-
-// Close the pop-up if the user clicks outside of it
-document.addEventListener('click', (event) => {
-    const popup = document.getElementById('popup');
-    const popupContent = document.getElementById('popup-content');
-
-    if (!popupContent.contains(event.target) && !event.target.closest('#customer-preference')) {
-        closePopup();
-    }
-});
-
 function updateTotalPrice() {
     const basketList = document.getElementById('basket-list');
     let total = 0;
@@ -267,6 +272,20 @@ function openPopup(type) {
 function closePopup() {
     document.getElementById('popup').classList.add('hidden');
 }
+
+document.getElementById('pick-up').addEventListener('click', () => openPopup('Pick Up'));
+document.getElementById('delivery').addEventListener('click', () => openPopup('Delivery'));
+document.getElementById('close-popup').addEventListener('click', () => closePopup());
+
+// Close the pop-up if the user clicks outside of it
+document.addEventListener('click', (event) => {
+    const popup = document.getElementById('popup');
+    const popupContent = document.getElementById('popup-content');
+
+    if (!popupContent.contains(event.target) && !event.target.closest('#customer-preference')) {
+        closePopup();
+    }
+});
 
 // Validation & Logic in pop-up
 document.addEventListener("DOMContentLoaded", function () {
