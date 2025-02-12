@@ -81,6 +81,7 @@
 #sales {
     padding: 60px 0px;
     text-align: center;
+    visibility: hidden; /* Remove when have decition about sales */
 }
 
 #sales p {

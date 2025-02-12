@@ -64,3 +64,8 @@ main section:not(.active) {
 .clear-search {
     margin: 0px 2px 0px 0px;
 }
+
+.notes-about-images {
+    text-align: center;
+    padding-top: 20px;
+}
