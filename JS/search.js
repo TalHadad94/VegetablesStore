@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         // Create clear button
         const clearButton = document.createElement('button');
+        clearButton.classList.add("clear-search");
         clearButton.textContent = 'נקה'; // Clear in Hebrew
         clearButton.addEventListener('click', () => {
           searchInput.value = ''; // Clear the input field
@@ -40,7 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         });
       } else {
-        console.error("Search or menu div not found in section:", section.id);
+        if (section.id !== "about" && section.id !== "basket") {
+          console.error("Search or menu div not found in section:", section.id);
+        }
       }
     });
   });
