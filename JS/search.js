@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       if (searchDiv && menuDiv) {
         const searchInput = document.createElement('input');
+        searchInput.classList.add("input-search");
         searchInput.type = 'text';
         searchInput.placeholder = 'חפש...';
         searchDiv.appendChild(searchInput);

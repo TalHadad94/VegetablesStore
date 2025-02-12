@@ -61,7 +61,12 @@ main section:not(.active) {
     margin: -15px 0px 20px 0px;
 }
 
+.input-search {
+    height: 100%;
+}
+
 .clear-search {
+    height: 100%;
     margin: 0px 2px 0px 0px;
 }
 

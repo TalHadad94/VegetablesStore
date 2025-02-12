@@ -53,7 +53,7 @@ function generateItems() {
                 textDetails.appendChild(name);
                 
                 const price = document.createElement("p");
-                price.textContent = `מחיר: ${item.price.toFixed(2)} ₪ | ל${item.units}`;
+                price.textContent = `${item.price.toFixed(2)} ₪ | ל${item.units}`;
                 price.classList.add("item-price");
                 textDetails.appendChild(price);
                 
