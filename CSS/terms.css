@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
