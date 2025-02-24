@@ -18,7 +18,8 @@
     <meta property="og:title" content="הגל הירוק - ירקות ופירות טריים באשדוד">
     <meta property="og:description" content="הגל הירוק - חנות ירקות ופירות טריים ואיכותיים באשדוד. משלוחים טריים עד הבית! הזמינו עכשיו!">
     <meta property="og:image" content="Images/logo.png"> 
-    <meta property="og:url" content="https://github.com/TalHadad94/VegetablesStore/tree/main"> 
+    <meta property="og:url" content="https://github.com/TalHadad94/VegetablesStore/tree/main">
+    <script src="https://www.paypal.com/sdk/js?client-id=AaF3vvTj3gcd0BcXpeVNtlc-Q6TbeFIoTYeDSko3v2yURuAqwVQmYnwqTVr1W_yLELHUuxRjce3qHy7o&currency=ILS"></script>
 </head>
 <body>
     <header>
@@ -139,6 +140,9 @@
                             <label>שלוש ספרות בגב הכרטיס:</label>
                             <input type="text" id="cvc" placeholder="123">
                         </div>
+
+                        <!-- PayPal Button Container (Initially Hidden) -->
+                        <div id="paypal-button-container" class="hidden"></div>
 
                         <button id="confirm-payment" disabled>אישור</button>
                         <button id="close-popup">סגור</button>

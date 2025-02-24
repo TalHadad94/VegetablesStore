@@ -248,46 +248,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTotalPrice();
 });
 
-function openPopup(type) {
-    const total = document.getElementById('total-price').textContent;
-    document.getElementById('popup-message').textContent = `סה"כ לתשלום: ${total}`;
-    
-    const addressLabel = document.getElementById('address-label');
-    const addressInput = document.getElementById('address');
-
-    if (type === 'Delivery') {
-        addressLabel.textContent = "כתובת למשלוח:";
-        addressInput.value = "";
-        addressInput.placeholder = "הכנס כתובת למשלוח";
-        addressInput.disabled = false;
-    } else {
-        addressLabel.textContent = "כתובת לאיסוף:";
-        addressInput.value = "חיים משה שפירא 17, אשדוד";
-        addressInput.disabled = true;
-    }
-
-    document.getElementById('popup').classList.remove('hidden');
-}
-
-function closePopup() {
-    document.getElementById('popup').classList.add('hidden');
-}
-
-document.getElementById('pick-up').addEventListener('click', () => openPopup('Pick Up'));
-document.getElementById('delivery').addEventListener('click', () => openPopup('Delivery'));
-document.getElementById('close-popup').addEventListener('click', () => closePopup());
-
-// Close the pop-up if the user clicks outside of it
-document.addEventListener('click', (event) => {
-    const popup = document.getElementById('popup');
-    const popupContent = document.getElementById('popup-content');
-
-    if (!popupContent.contains(event.target) && !event.target.closest('#customer-preference')) {
-        closePopup();
-    }
-});
-
-// Validation & Logic in pop-up
 document.addEventListener("DOMContentLoaded", function () {
     const addressInput = document.getElementById("address");
     const phoneInput = document.getElementById("phone");
@@ -295,18 +255,52 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmButton = document.getElementById("confirm-payment");
     const creditCardFields = document.getElementById("credit-card-fields");
     const cardInputs = creditCardFields.querySelectorAll("input");
+    const paypalButtonContainer = document.getElementById("paypal-button-container");
 
-    // Function to validate an Israeli phone number
+    function openPopup(type) {
+        const total = document.getElementById('total-price').textContent;
+        document.getElementById('popup-message').textContent = `סה\"כ לתשלום: ${total}`;
+        
+        const addressLabel = document.getElementById('address-label');
+        
+        if (type === 'Delivery') {
+            addressLabel.textContent = "כתובת למשלוח:";
+            addressInput.value = "";
+            addressInput.placeholder = "הכנס כתובת למשלוח";
+            addressInput.disabled = false;
+        } else {
+            addressLabel.textContent = "כתובת לאיסוף:";
+            addressInput.value = "חיים משה שפירא 17, אשדוד";
+            addressInput.disabled = true;
+        }
+
+        document.getElementById('popup').classList.remove('hidden');
+    }
+
+    function closePopup() {
+        document.getElementById('popup').classList.add('hidden');
+    }
+
+    document.getElementById('pick-up').addEventListener('click', () => openPopup('Pick Up'));
+    document.getElementById('delivery').addEventListener('click', () => openPopup('Delivery'));
+    document.getElementById('close-popup').addEventListener('click', () => closePopup());
+
+    document.addEventListener('click', (event) => {
+        const popup = document.getElementById('popup');
+        const popupContent = document.getElementById('popup-content');
+        if (!popupContent.contains(event.target) && !event.target.closest('#customer-preference')) {
+            closePopup();
+        }
+    });
+
     function isValidPhone(phone) {
         return /^05\d{8}$/.test(phone);
     }
 
-    // Function to validate an address (basic check, can be improved)
     function isValidAddress(address) {
-        return address.length > 5; // Adjust as needed
+        return address.length > 5;
     }
 
-    // Function to validate credit card fields
     function isValidCard() {
         const cardName = document.getElementById("card-name").value.trim();
         const cardNumber = document.getElementById("card-number").value.replace(/\s+/g, "");
@@ -321,7 +315,6 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
-    // Function to check if all fields are valid
     function validateForm() {
         const addressValid = isValidAddress(addressInput.value);
         const phoneValid = isValidPhone(phoneInput.value);
@@ -335,17 +328,45 @@ document.addEventListener("DOMContentLoaded", function () {
         confirmButton.disabled = !(addressValid && phoneValid && paymentValid && cardValid);
     }
 
-    // Event listeners
     addressInput.addEventListener("input", validateForm);
     phoneInput.addEventListener("input", validateForm);
+    
     paymentMethod.addEventListener("change", function () {
         if (this.value === "credit-card") {
             creditCardFields.classList.remove("hidden");
+            paypalButtonContainer.classList.add("hidden");
+            confirmButton.disabled = false;
+        } else if (this.value === "paypal") {
+            creditCardFields.classList.add("hidden");
+            paypalButtonContainer.classList.remove("hidden");
+            confirmButton.disabled = true;
         } else {
             creditCardFields.classList.add("hidden");
+            paypalButtonContainer.classList.add("hidden");
+            confirmButton.disabled = true;
         }
         validateForm();
     });
 
     cardInputs.forEach(input => input.addEventListener("input", validateForm));
+
+    paypal.Buttons({
+        createOrder: function (data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: "10.00" // Replace with actual order amount
+                    }
+                }]
+            });
+        },
+        onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+                alert("Payment successful! Thank you, " + details.payer.name.given_name);
+            });
+        },
+        onError: function (err) {
+            console.error("PayPal Checkout Error:", err);
+        }
+    }).render("#paypal-button-container");
 });
