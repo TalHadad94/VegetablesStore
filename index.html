@@ -19,7 +19,6 @@
     <meta property="og:description" content="הגל הירוק - חנות ירקות ופירות טריים ואיכותיים באשדוד. משלוחים טריים עד הבית! הזמינו עכשיו!">
     <meta property="og:image" content="Images/logo.png"> 
     <meta property="og:url" content="https://github.com/TalHadad94/VegetablesStore/tree/main">
-    <script src="https://www.paypal.com/sdk/js?client-id=AaF3vvTj3gcd0BcXpeVNtlc-Q6TbeFIoTYeDSko3v2yURuAqwVQmYnwqTVr1W_yLELHUuxRjce3qHy7o&currency=ILS"></script>
 </head>
 <body>
     <header>
@@ -118,33 +117,10 @@
                         <label id="phone-label">מספר טלפון:</label>
                         <input type="text" id="phone" placeholder="הכנס מספר טלפון" required>
 
-                        <label>תשלום ב:
-                            <select id="payment-method" required>
-                                <option value="">בחר אמצעי תשלום</option>
-                                <option value="credit-card">כרטיס אשראי</option>
-                                <option value="paypal">PayPal</option>
-                            </select>
-                        </label>
+                        <label id="customer-label">שם הלקוח:</label>
+                        <input type="text" id="customer" placeholder="הכנס את שמך" required>
 
-                        <!-- Hidden credit card fields -->
-                        <div id="credit-card-fields" class="hidden">
-                            <label>שם בעל הכרטיס:</label>
-                            <input type="text" id="card-name" placeholder="שם מלא על הכרטיס">
-
-                            <label>מספר כרטיס:</label>
-                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
-
-                            <label>תוקף:</label>
-                            <input type="text" id="expiry-date" placeholder="MM/YY">
-
-                            <label>שלוש ספרות בגב הכרטיס:</label>
-                            <input type="text" id="cvc" placeholder="123">
-                        </div>
-
-                        <!-- PayPal Button Container (Initially Hidden) -->
-                        <div id="paypal-button-container" class="hidden"></div>
-
-                        <button id="confirm-payment" disabled>אישור</button>
+                        <button id="confirm-order" disabled>אישור</button>
                         <button id="close-popup">סגור</button>
                     </div>
                 </div>
@@ -158,10 +134,8 @@
     <footer>
         <p>אתר הגל הירוק 2025 &copy;</p>
         <a href="HTML/privacy-policy.html">מדיניות פרטיות</a> |
-        <a href="HTML/terms.html">תנאי שירות</a>
-        <br>
-        <a href="HTML/accessibility-statement.html">הצהרת נגישות</a> |
-        <a href="HTML/contact.html">צור קשר</a>
+        <a href="HTML/terms.html">תנאי שירות</a> |
+        <a href="HTML/accessibility-statement.html">הצהרת נגישות</a> 
     </footer>
     <script src="JS/navbar.js"></script>
     <script src="JS/sections.js"></script>

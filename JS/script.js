@@ -248,14 +248,11 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTotalPrice();
 });
 
+// Pop-Up
 document.addEventListener("DOMContentLoaded", function () {
     const addressInput = document.getElementById("address");
     const phoneInput = document.getElementById("phone");
-    const paymentMethod = document.getElementById("payment-method");
-    const confirmButton = document.getElementById("confirm-payment");
-    const creditCardFields = document.getElementById("credit-card-fields");
-    const cardInputs = creditCardFields.querySelectorAll("input");
-    const paypalButtonContainer = document.getElementById("paypal-button-container");
+    const confirmButton = document.getElementById("confirm-order");
 
     function openPopup(type) {
         const total = document.getElementById('total-price').textContent;
@@ -286,7 +283,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('close-popup').addEventListener('click', () => closePopup());
 
     document.addEventListener('click', (event) => {
-        const popup = document.getElementById('popup');
         const popupContent = document.getElementById('popup-content');
         if (!popupContent.contains(event.target) && !event.target.closest('#customer-preference')) {
             closePopup();
@@ -301,72 +297,17 @@ document.addEventListener("DOMContentLoaded", function () {
         return address.length > 5;
     }
 
-    function isValidCard() {
-        const cardName = document.getElementById("card-name").value.trim();
-        const cardNumber = document.getElementById("card-number").value.replace(/\s+/g, "");
-        const expiryDate = document.getElementById("expiry-date").value;
-        const cvc = document.getElementById("cvc").value;
-
-        return (
-            cardName.length > 2 &&
-            /^\d{16}$/.test(cardNumber) &&
-            /^\d{2}\/\d{2}$/.test(expiryDate) &&
-            /^\d{3}$/.test(cvc)
-        );
-    }
-
     function validateForm() {
         const addressValid = isValidAddress(addressInput.value);
         const phoneValid = isValidPhone(phoneInput.value);
-        const paymentValid = paymentMethod.value !== "";
-        let cardValid = true;
 
-        if (paymentMethod.value === "credit-card") {
-            cardValid = isValidCard();
-        }
-
-        confirmButton.disabled = !(addressValid && phoneValid && paymentValid && cardValid);
+        confirmButton.disabled = !(addressValid && phoneValid);
     }
 
     addressInput.addEventListener("input", validateForm);
     phoneInput.addEventListener("input", validateForm);
-    
-    paymentMethod.addEventListener("change", function () {
-        if (this.value === "credit-card") {
-            creditCardFields.classList.remove("hidden");
-            paypalButtonContainer.classList.add("hidden");
-            confirmButton.disabled = false;
-        } else if (this.value === "paypal") {
-            creditCardFields.classList.add("hidden");
-            paypalButtonContainer.classList.remove("hidden");
-            confirmButton.disabled = true;
-        } else {
-            creditCardFields.classList.add("hidden");
-            paypalButtonContainer.classList.add("hidden");
-            confirmButton.disabled = true;
-        }
-        validateForm();
-    });
+});
 
-    cardInputs.forEach(input => input.addEventListener("input", validateForm));
-
-    paypal.Buttons({
-        createOrder: function (data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: "10.00" // Replace with actual order amount
-                    }
-                }]
-            });
-        },
-        onApprove: function (data, actions) {
-            return actions.order.capture().then(function (details) {
-                alert("Payment successful! Thank you, " + details.payer.name.given_name);
-            });
-        },
-        onError: function (err) {
-            console.error("PayPal Checkout Error:", err);
-        }
-    }).render("#paypal-button-container");
+document.getElementById("confirm-order").addEventListener("click", function () {
+    window.location.href = "HTML/order-complete.html";
 });
