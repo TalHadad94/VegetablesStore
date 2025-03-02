@@ -143,6 +143,7 @@ function addBasketItem(itemName, amount, price) {
     if (!listItem) {
         listItem = document.createElement('li');
         listItem.dataset.name = itemName;
+        listItem.classList.add('basket-item');
 
         // Apply styles for spacing and list dots
         listItem.style.display = 'flex';
@@ -225,6 +226,9 @@ function updateTotalPrice() {
     
     // Enable delivery button only if total > 130
     document.getElementById('delivery').disabled = total <= 129;
+
+    // Store total in localStorage
+    localStorage.setItem('orderTotal', total);
 }
 
 // Function to toggle the visibility of the empty/full basket
