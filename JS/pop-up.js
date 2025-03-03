@@ -75,17 +75,14 @@ document.addEventListener("DOMContentLoaded", function () {
     nameInput.addEventListener("input", validateForm);
 });
 
-// Redirect the page to order-complete.html and send message to Telegram Bot
+// Redirect the page to order-complete.html and send message to Cloudflare Worker
 document.getElementById("confirm-order").addEventListener("click", function () {
-    const botToken = "7829854073:AAGpJRL6779AtCHoNS84gFfDkycCraXFzeo";
-    const chatId = "-1002438314464";
+    const workerUrl = "https://workers-telegram-broad-sun-41e6.talsmd95-a82.workers.dev/"; // Change this!
 
-    // Get the input values
+    // Get input values
     const address = document.getElementById("address").value || "חיים משה שפירא 17, אשדוד"; // Default for Pick-up
     const phoneNumber = document.getElementById("phone").value;
     const customerName = document.getElementById("customer").value;
-
-    // Get the price value
     const total = document.getElementById('total-price').textContent;
 
     // Get the current date and time
@@ -100,28 +97,35 @@ document.getElementById("confirm-order").addEventListener("click", function () {
     let itemsList = "";
     const basketList = document.querySelectorAll(".basket-item");
 
-    basketList.forEach((item, index) => {
-        // Extract name dynamically
+    basketList.forEach((item) => {
         const itemName = item.childNodes[0]?.textContent.trim() || "שם לא נמצא"; 
-
-        // Append to itemsList
         itemsList += `\n📌 ${itemName}\n`;
     });
 
-    // Create the message for Telegram
-    const message = `${dateTime}\nסוג הזמנה: ${orderType}\nשם הלקוח: ${customerName}\nכתובת: ${address}\nטלפון: ${phoneNumber}\n\n💰 סה"כ לתשלום: ${total}\n\n🛒 פרטי ההזמנה: ${itemsList}`;
-    console.log("Final Message to Telegram:\n", message);
-    const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+    // Prepare data for Cloudflare Worker
+    const orderData = {
+        customerName,
+        address,
+        phoneNumber,
+        total,
+        itemsList,
+        orderType: "משלוח", // You can modify this dynamically if needed
+        dateTime
+    };
 
-    // Send the message to Telegram and store total before redirect
-    fetch(apiUrl, {
+    // Send the message via Cloudflare Worker
+    fetch(workerUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chat_id: chatId, text: message })
+        body: JSON.stringify(orderData)
     })
     .then(response => response.json())
     .then(data => {
-        window.location.href = "HTML/order-complete.html";
+        if (data.success) {
+            window.location.href = "HTML/order-complete.html";
+        } else {
+            console.error("Error sending order:", data);
+        }
     })
-    .catch(error => console.error("Error sending message:", error));
+    .catch(error => console.error("Error:", error));
 });
