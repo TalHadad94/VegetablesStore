@@ -109,7 +109,7 @@ document.getElementById("confirm-order").addEventListener("click", function () {
         phoneNumber,
         total,
         itemsList,
-        orderType: "משלוח", // You can modify this dynamically if needed
+        orderType,
         dateTime
     };
 
