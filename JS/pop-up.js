@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById('delivery').addEventListener('click', () => {
-    orderType = "משלוח";
-    openPopup('Delivery');
+        orderType = "משלוח";
+        openPopup('Delivery');
     });
 
     document.getElementById('close-popup').addEventListener('click', () => closePopup());
