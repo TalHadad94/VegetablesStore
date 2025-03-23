@@ -31,3 +31,8 @@ document.querySelectorAll('nav ul li a').forEach(link => {
 document.querySelectorAll('#basket-empty a').forEach(link => {
     link.addEventListener('click', handleLinkClick);
 });
+
+// Attach event listeners to Delivery section in the footer
+document.querySelectorAll('footer a[href="#about"]').forEach(link => {
+    link.addEventListener('click', handleLinkClick);
+});
