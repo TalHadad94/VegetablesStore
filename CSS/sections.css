@@ -21,6 +21,11 @@ main section:not(.active) {
     padding: 0 25px;
 }
 
+#about h1{
+    font-size: 18px;
+    margin-bottom: -15px;
+}
+
 #about h2{
     font-size: 18px;
 }

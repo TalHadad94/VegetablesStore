@@ -49,6 +49,7 @@
     padding: 8px 20px;
     font-size: 16px;
     margin: 5px;
+    margin-bottom: 200px;
     cursor: pointer;
     border: none;
     border-radius: 20px;
@@ -76,17 +77,4 @@
 #delivery:disabled {
     background: #ccc;
     cursor: not-allowed;
-}
-
-#sales {
-    padding: 60px 0px;
-    text-align: center;
-    visibility: hidden; /* Remove when have decition about sales */
-}
-
-#sales p {
-    margin: 0px 0px 0px 0px;
-    font-size: 18px; /* Adjust size as needed */
-    color: #096115; /* Base text color */
-    text-shadow: 0 0 10px rgba(200, 213, 18, 0.7), 0 0 20px rgba(184, 9, 9, 0.5), 0 0 30px rgba(180, 7, 7, 0.3); /* Glowing effect */
 }
