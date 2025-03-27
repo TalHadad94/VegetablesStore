@@ -15,11 +15,27 @@ body {
     text-align: right;
     background: url('../Images/Section\ background.png') no-repeat fixed;
     background-size: cover;
+    width: 100%;
+    max-width: 764px; /* Adjust to fit phone screens nicely */
+}
+/* Larger screens */
+@media (min-width: 764px) {
+    body {
+        max-width: 100%;
+        background: url('../Images/Section\ background-Bigscreen.png') no-repeat fixed;
+        background-size: cover;
+    }
 }
 
 /* Header */
 header {
     background: url('../Images/Header\ background.jpg') no-repeat center/cover;
+}
+/* Larger screens */
+@media (min-width: 764px) {
+    header {
+        background: url('../Images/Header\ background-Bigscreen.png') no-repeat center/cover;
+    }
 }
 
 .logo {
