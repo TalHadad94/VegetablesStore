@@ -25,6 +25,12 @@ nav ul li a {
     z-index: 0;
     transition: color 0.3s;
 }
+/* Larger screens */
+@media (min-width: 764px) {
+    nav ul li a {
+        font-size: 22px;
+    }
+}
 
 nav ul li a:hover,
 nav ul li a.active {
