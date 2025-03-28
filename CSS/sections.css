@@ -79,3 +79,11 @@ main section:not(.active) {
     text-align: center;
     padding-top: 20px;
 }
+
+#vegetables h1 {
+    text-align: center;
+}
+
+#fruits h1 {
+    text-align: center;
+}
