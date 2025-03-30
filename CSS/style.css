@@ -13,8 +13,12 @@ body {
     font-family: Arial, sans-serif;
     direction: rtl;
     text-align: right;
-    background: url('../Images/Section\ background.png') no-repeat fixed;
+    background: url('../Images/Section\ background.png') fixed;
     background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover; /* For Safari */
+    -moz-background-size: cover;
+    -o-background-size: cover;
     width: 100%;
     max-width: 764px; /* Adjust to fit phone screens nicely */
 }
