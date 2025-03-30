@@ -39,13 +39,15 @@
     width: 22px;
     height: 22px;
     display: flex;
-    line-height: normal;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 14px; /* Adjust this if needed */
+    line-height: 22px; /* Ensure vertical centering */
     border-radius: 50%;
     color: #096115;
     border: 1px solid #096115;
+    font-weight: bold; /* Ensure visibility */
 }
 
 .menu {
