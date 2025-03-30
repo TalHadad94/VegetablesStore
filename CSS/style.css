@@ -13,14 +13,15 @@ body {
     font-family: Arial, sans-serif;
     direction: rtl;
     text-align: right;
-    background: url('../Images/Section\ background.png') fixed;
+    background-image: url('../Images/Section%20background.png');
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-background-size: cover; /* For Safari */
+    background-attachment: fixed;
+    -webkit-background-size: cover; /* Safari fix */
     -moz-background-size: cover;
     -o-background-size: cover;
     width: 100%;
-    max-width: 764px; /* Adjust to fit phone screens nicely */
+    max-width: 764px;
 }
 /* Larger screens */
 @media (min-width: 764px) {
