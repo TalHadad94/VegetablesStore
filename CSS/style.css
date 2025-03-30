@@ -13,18 +13,19 @@ body {
     font-family: Arial, sans-serif;
     direction: rtl;
     text-align: right;
-    
+
     background-image: url('../Images/Section%20background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    
-    /* Apple Fix: Prevents background from moving when scrolling */
-    min-height: 100vh;
-    background-attachment: fixed;
 
-    /* Fix for Safari */
-    -webkit-background-attachment: fixed;
+    /* Ensure the background stays fixed for all devices, including Apple */
+    height: 100vh;
+    min-height: 100%; /* Ensures it fills the entire screen */
+
+    /* Ensures it behaves consistently across platforms */
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed; /* For Safari */
 }
 
 /* Larger screens */
