@@ -13,16 +13,20 @@ body {
     font-family: Arial, sans-serif;
     direction: rtl;
     text-align: right;
+    
     background-image: url('../Images/Section%20background.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center top;
+    
+    /* Apple Fix: Prevents background from moving when scrolling */
+    min-height: 100vh;
     background-attachment: fixed;
-    -webkit-background-size: cover; /* Safari fix */
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    width: 100%;
-    max-width: 764px;
+
+    /* Fix for Safari */
+    -webkit-background-attachment: fixed;
 }
+
 /* Larger screens */
 @media (min-width: 764px) {
     body {
