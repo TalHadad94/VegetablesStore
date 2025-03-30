@@ -35,7 +35,12 @@
     width: 25px;
 }
 
-.decrease-button,.increase-button {
+.decrease-button, .increase-button {
+    width: 22px;
+    height: 22px;
+    line-height: 18px;
+    text-align: center;
+    display: inline-block;
     border-radius: 50%;
     color: #096115;
     border: 1px solid #096115;
