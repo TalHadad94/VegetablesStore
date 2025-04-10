@@ -1,6 +1,32 @@
-# VegetablesStore
-Fruit and vegetables online store
+# 🍎 Fruit and Vegetables Online Store – [agalayarok.com](https://agalayarok.com)
 
-![צילום מסך 2025-02-16 020304](https://github.com/user-attachments/assets/6f192836-588f-4571-a543-ef9cbbd1a144)
-![צילום מסך 2025-02-16 020319](https://github.com/user-attachments/assets/4a6bd1e3-1205-4bde-a9ee-3b3576060f7c)
-![צילום מסך 2025-02-16 020337](https://github.com/user-attachments/assets/4d4005ba-61b2-4cdd-abed-aa340dc67834)
+A fast, secure, and user-friendly online store built from scratch for a client in the food retail industry. This web solution helps promote and sell fresh produce directly to customers with a clean design and responsive performance.
+
+## 🛠 Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript (Vanilla)
+- **Backend & Integrations:** Python, Telegram Bot, PayPal Payment Gateway
+- **Deployment:** GitHub Pages (with HTTPS via Cloudflare)
+- **Other Tools:** Google SEO Optimization, Google Analytics, Image Generation AI tools, Namecheap (domain)
+
+## ⚙️ Features
+
+- Product browsing with high-quality images
+- Live search and category filtering
+- Shopping cart with PayPal checkout
+- Mobile-first, fully responsive layout
+- Telegram bot integration for order notifications
+- SEO-optimized pages and real-time analytics
+
+## 💡 Project Highlights
+
+- Built entirely with **native HTML/CSS/JS**, resulting in a lightweight and fast-loading experience.
+- Focused on **performance and user experience** with no reliance on bulky frameworks.
+- Covers the full development stack: planning, design, coding, SEO, analytics, and deployment.
+
+## 🌐 Live Website
+
+👉 [agalayarok.com](https://agalayarok.com)
+
+---
+
